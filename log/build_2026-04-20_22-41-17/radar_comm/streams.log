@@ -1,0 +1,26 @@
+[0.008s] Invoking command in '/home/moci/wust_rm/radar_serial/build/radar_comm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/moci/wust_rm/radar_serial/build/radar_comm -- -j16 -l16
+[0.030s] [ 20%] [32mBuilding CXX object CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o[0m
+[0.104s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:[m[K In member function ‘[01m[Kstd::optional<std::variant<EnemyRobotPosition> > ProtocolParser::input(uint8_t)[m[K’:
+[0.104s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:22:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kverify_crc8[m[K’ was not declared in this scope; did you mean ‘[01m[Kradar_comm::verify_crc8[m[K’?
+[0.104s]    22 |             if (![01;31m[Kverify_crc8[m[K(buffer_.data(), 5))
+[0.104s]       |                  [01;31m[K^~~~~~~~~~~[m[K
+[0.104s]       |                  [32m[Kradar_comm::verify_crc8[m[K
+[0.104s] In file included from [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:2[m[K:
+[0.104s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/include/radar_comm/protocol/crc.hpp:8:6:[m[K [01;36m[Knote: [m[K‘[01m[Kradar_comm::verify_crc8[m[K’ declared here
+[0.104s]     8 | bool [01;36m[Kverify_crc8[m[K(uint8_t *data, uint32_t len);
+[0.104s]       |      [01;36m[K^~~~~~~~~~~[m[K
+[0.104s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:45:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::vector<unsigned char>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[0.104s]    45 |         if ([01;35m[Kbuffer_.size() == expected_length_ - 2[m[K)
+[0.104s]       |             [01;35m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.104s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:55:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kverify_crc16[m[K’ was not declared in this scope; did you mean ‘[01m[Kradar_comm::verify_crc16[m[K’?
+[0.104s]    55 |             if (![01;31m[Kverify_crc16[m[K(buffer_.data(), expected_length_))
+[0.104s]       |                  [01;31m[K^~~~~~~~~~~~[m[K
+[0.105s]       |                  [32m[Kradar_comm::verify_crc16[m[K
+[0.105s] In file included from [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:2[m[K:
+[0.105s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/include/radar_comm/protocol/crc.hpp:11:6:[m[K [01;36m[Knote: [m[K‘[01m[Kradar_comm::verify_crc16[m[K’ declared here
+[0.105s]    11 | bool [01;36m[Kverify_crc16[m[K(uint8_t *data, uint32_t len);
+[0.105s]       |      [01;36m[K^~~~~~~~~~~~[m[K
+[0.116s] gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:90：CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o] 错误 1
+[0.116s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/test_parser.dir/all] 错误 2
+[0.116s] gmake: *** [Makefile:146：all] 错误 2
+[0.118s] Invoked command in '/home/moci/wust_rm/radar_serial/build/radar_comm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/moci/wust_rm/radar_serial/build/radar_comm -- -j16 -l16

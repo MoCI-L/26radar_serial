@@ -1,0 +1,18 @@
+[0.009s] Invoking command in '/home/moci/wust_rm/radar_serial/build/radar_comm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/moci/wust_rm/radar_serial/build/radar_comm -- -j16 -l16
+[0.032s] [ 20%] [32mBuilding CXX object CMakeFiles/test_parser.dir/src/protocol/crc.cpp.o[0m
+[0.032s] [ 40%] [32mBuilding CXX object CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o[0m
+[0.033s] [ 60%] [32mBuilding CXX object CMakeFiles/test_parser.dir/src/protocol/decoder.cpp.o[0m
+[0.038s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kparser.hpp: 没有那个文件或目录
+[0.038s]     1 | #include [01;31m[K"parser.hpp"[m[K
+[0.038s]       |          [01;31m[K^~~~~~~~~~~~[m[K
+[0.038s] compilation terminated.
+[0.039s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/decoder.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kdecoder.hpp: 没有那个文件或目录
+[0.039s]     1 | #include [01;31m[K"decoder.hpp"[m[K
+[0.039s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[0.039s] compilation terminated.
+[0.039s] gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:90：CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o] 错误 1
+[0.039s] gmake[2]: *** 正在等待未完成的任务....
+[0.039s] gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:118：CMakeFiles/test_parser.dir/src/protocol/decoder.cpp.o] 错误 1
+[0.053s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/test_parser.dir/all] 错误 2
+[0.053s] gmake: *** [Makefile:146：all] 错误 2
+[0.055s] Invoked command in '/home/moci/wust_rm/radar_serial/build/radar_comm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/moci/wust_rm/radar_serial/build/radar_comm -- -j16 -l16

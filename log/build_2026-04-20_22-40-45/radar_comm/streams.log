@@ -1,0 +1,12 @@
+[0.009s] Invoking command in '/home/moci/wust_rm/radar_serial/build/radar_comm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/moci/wust_rm/radar_serial/build/radar_comm -- -j16 -l16
+[0.033s] [ 20%] [32mBuilding CXX object CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o[0m
+[0.034s] [ 40%] [32mBuilding CXX object CMakeFiles/test_parser.dir/src/protocol/decoder.cpp.o[0m
+[0.058s] [01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kradar_comm/protocol/ecoder.hpp: 没有那个文件或目录
+[0.058s]     3 | #include [01;31m[K"radar_comm/protocol/ecoder.hpp"[m[K
+[0.058s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.058s] compilation terminated.
+[0.059s] gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:90：CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o] 错误 1
+[0.059s] gmake[2]: *** 正在等待未完成的任务....
+[0.126s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/test_parser.dir/all] 错误 2
+[0.126s] gmake: *** [Makefile:146：all] 错误 2
+[0.127s] Invoked command in '/home/moci/wust_rm/radar_serial/build/radar_comm' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/local/bin/cmake --build /home/moci/wust_rm/radar_serial/build/radar_comm -- -j16 -l16

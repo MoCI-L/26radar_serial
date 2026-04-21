@@ -1,0 +1,20 @@
+[01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kparser.hpp: 没有那个文件或目录
+    1 | #include [01;31m[K"parser.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+[01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/decoder.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kdecoder.hpp: 没有那个文件或目录
+    1 | #include [01;31m[K"decoder.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:118：CMakeFiles/test_parser.dir/src/protocol/decoder.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:90：CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o] 错误 1
+[01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/crc.cpp:76:27:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K;[m[K’ token
+   76 |     0x2c6a, 0x1ef1, 0x0f78[01;31m[K;[m[K
+      |                           [01;31m[K^[m[K
+[01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/crc.cpp:47:40:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   47 | static const uint16_t CRC16_TAB[256] = [01;36m[K{[m[K
+      |                                        [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:104：CMakeFiles/test_parser.dir/src/protocol/crc.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/test_parser.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

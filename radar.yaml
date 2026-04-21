@@ -1,0 +1,383 @@
+# RoboMaster 2026 通信协议 - 雷达无线链路数据说明 (1.6节)
+# 命令码ID列表：0x0A01, 0x0A02, 0x0A03, 0x0A04, 0x0A05, 0x0A06
+# 所有数据均为小端字节序，频率上限10Hz。
+
+- cmd_id: 0x0A01
+  name: EnemyRobotPosition
+  description: 对方机器人的位置坐标（单位：cm）
+  length: 24
+  fields:
+    - offset: 0
+      size: 2
+      type: uint16
+      description: 对方英雄机器人位置 x 轴坐标
+      name: hero_x
+    - offset: 2
+      size: 2
+      type: uint16
+      description: 对方英雄机器人位置 y 轴坐标
+      name: hero_y
+    - offset: 4
+      size: 2
+      type: uint16
+      description: 对方工程机器人位置 x 轴坐标
+      name: engineer_x
+    - offset: 6
+      size: 2
+      type: uint16
+      description: 对方工程机器人位置 y 轴坐标
+      name: engineer_y
+    - offset: 8
+      size: 2
+      type: uint16
+      description: 对方3号步兵机器人位置 x 轴坐标
+      name: infantry_3_x
+    - offset: 10
+      size: 2
+      type: uint16
+      description: 对方3号步兵机器人位置 y 轴坐标
+      name: infantry_3_y
+    - offset: 12
+      size: 2
+      type: uint16
+      description: 对方4号步兵机器人位置 x 轴坐标
+      name: infantry_4_x
+    - offset: 14
+      size: 2
+      type: uint16
+      description: 对方4号步兵机器人位置 y 轴坐标
+      name: infantry_4_y
+    - offset: 16
+      size: 2
+      type: uint16
+      description: 对方空中机器人位置 x 轴坐标
+      name: aerial_x
+    - offset: 18
+      size: 2
+      type: uint16
+      description: 对方空中机器人位置 y 轴坐标
+      name: aerial_y
+    - offset: 20
+      size: 2
+      type: uint16
+      description: 对方哨兵机器人位置 x 轴坐标
+      name: sentry_x
+    - offset: 22
+      size: 2
+      type: uint16
+      description: 对方哨兵机器人位置 y 轴坐标
+      name: sentry_y
+
+- cmd_id: 0x0A02
+  name: EnemyRobotHP
+  description: 对方机器人的血量（若未上场或被罚下则为0）
+  length: 12
+  fields:
+    - offset: 0
+      size: 2
+      type: uint16
+      description: 对方1号英雄机器人血量
+      name: hero_hp
+    - offset: 2
+      size: 2
+      type: uint16
+      description: 对方2号工程机器人血量
+      name: engineer_hp
+    - offset: 4
+      size: 2
+      type: uint16
+      description: 对方3号步兵机器人血量
+      name: infantry_3_hp
+    - offset: 6
+      size: 2
+      type: uint16
+      description: 对方4号步兵机器人血量
+      name: infantry_4_hp
+    - offset: 8
+      size: 2
+      type: uint16
+      description: 保留位
+      name: reserved
+    - offset: 10
+      size: 2
+      type: uint16
+      description: 对方7号哨兵机器人血量
+      name: sentry_hp
+
+- cmd_id: 0x0A03
+  name: EnemyRemainingAmmo
+  description: 对方机器人的剩余允许发弹量（部分含堡垒储备）
+  length: 10
+  fields:
+    - offset: 0
+      size: 2
+      type: uint16
+      description: 对方1号英雄机器人允许发弹量
+      name: hero_ammo
+    - offset: 2
+      size: 2
+      type: uint16
+      description: 对方3号步兵机器人允许发弹量（含堡垒提供的储备）
+      name: infantry_3_ammo
+    - offset: 4
+      size: 2
+      type: uint16
+      description: 对方4号步兵机器人允许发弹量（含堡垒提供的储备）
+      name: infantry_4_ammo
+    - offset: 6
+      size: 2
+      type: uint16
+      description: 对方6号空中机器人允许发弹量
+      name: aerial_ammo
+    - offset: 8
+      size: 2
+      type: uint16
+      description: 对方7号哨兵机器人允许发弹量
+      name: sentry_ammo
+
+- cmd_id: 0x0A04
+  name: EnemyTeamMacroStatus
+  description: 对方队伍的宏观状态信息（金币、占领状态等）
+  length: 8
+  fields:
+    - offset: 0
+      size: 2
+      type: uint16
+      description: 对方剩余金币数
+      name: remaining_gold
+    - offset: 2
+      size: 2
+      type: uint16
+      description: 对方累计总金币数
+      name: total_gold
+    # 4字节位域字段，拆分为多个位字段
+    - offset: 4
+      bit_offset: 0
+      bit_length: 1
+      type: bit
+      description: 对方补给区占领状态 (1=已占领)
+      name: enemy_supply_area_occupied
+    - offset: 4
+      bit_offset: 1
+      bit_length: 2
+      type: uint2
+      description: 对方中央高地的占领状态 (1=被对方占领, 2=被己方占领)
+      name: enemy_central_highland_status
+    - offset: 4
+      bit_offset: 3
+      bit_length: 1
+      type: bit
+      description: 对方梯形高地的占领状态 (1=已占领)
+      name: enemy_trapezoid_highland_occupied
+    - offset: 4
+      bit_offset: 4
+      bit_length: 2
+      type: uint2
+      description: 对方堡垒增益点的占领状态 (0=未占领, 1=被对方占领, 2=被己方占领, 3=被双方占领)
+      name: enemy_fort_buff_status
+    - offset: 4
+      bit_offset: 6
+      bit_length: 2
+      type: uint2
+      description: 对方前哨站增益点的占领状态 (0=未占领, 1=被对方占领, 2=被己方占领)
+      name: enemy_outpost_buff_status
+    - offset: 4
+      bit_offset: 8
+      bit_length: 1
+      type: bit
+      description: 对方基地增益点的占领状态 (1=已占领)
+      name: enemy_base_buff_occupied
+    - offset: 4
+      bit_offset: 9
+      bit_length: 1
+      type: bit
+      description: 靠近对方一侧飞坡前地形跨越增益点（隧道）中心处场地交互模块卡的状态 (1=被对方占领)
+      name: enemy_tunnel_pre_jump_occupied
+    - offset: 4
+      bit_offset: 10
+      bit_length: 1
+      type: bit
+      description: 靠近对方一侧飞坡后地形跨越增益点（隧道）中心处场地交互模块卡的状态 (1=被对方占领)
+      name: enemy_tunnel_post_jump_occupied
+    - offset: 4
+      bit_offset: 11
+      bit_length: 1
+      type: bit
+      description: 靠近己方一侧飞坡前地形跨越增益点（隧道）中心处场地交互模块卡的状态 (1=被对方占领)
+      name: ally_side_tunnel_pre_jump_occupied
+    - offset: 4
+      bit_offset: 12
+      bit_length: 1
+      type: bit
+      description: 靠近己方一侧飞坡后地形跨越增益点（隧道）中心处场地交互模块卡的状态 (1=被对方占领)
+      name: ally_side_tunnel_post_jump_occupied
+    - offset: 4
+      bit_offset: 13
+      bit_length: 1
+      type: bit
+      description: 对方地形跨越增益点（高地）上部场地交互模块卡的状态 (1=被对方占领)
+      name: enemy_highland_upper_occupied
+    - offset: 4
+      bit_offset: 14
+      bit_length: 1
+      type: bit
+      description: 对方地形跨越增益点（飞坡）上部场地交互模块卡的状态 (1=被对方占领)
+      name: enemy_jump_upper_occupied
+    - offset: 4
+      bit_offset: 15
+      bit_length: 1
+      type: bit
+      description: 对方地形跨越增益点（公路）上部场地交互模块卡的状态 (1=被对方占领)
+      name: enemy_road_upper_occupied
+
+- cmd_id: 0x0A05
+  name: EnemyRobotBuffs
+  description: 对方各机器人当前的增益效果（百分比或直接值）
+  length: 36
+  fields:
+    # 英雄机器人
+    - offset: 0
+      size: 1
+      type: uint8
+      description: 对方英雄机器人回血增益（百分比，值为10表示每秒恢复血量上限的10%）
+      name: hero_health_regen
+    - offset: 1
+      size: 2
+      type: uint16
+      description: 对方英雄机器人射击热量冷却增益（直接值，值为x表示热量冷却增加x/s）
+      name: hero_cooling_boost
+    - offset: 3
+      size: 1
+      type: uint8
+      description: 对方英雄机器人防御增益（百分比，值为50表示50%防御增益）
+      name: hero_defense_boost
+    - offset: 4
+      size: 1
+      type: uint8
+      description: 对方英雄机器人负防御增益（百分比，值为30表示-30%防御增益）
+      name: hero_defense_debuff
+    - offset: 5
+      size: 2
+      type: uint16
+      description: 对方英雄机器人攻击增益（百分比，值为50表示50%攻击增益）
+      name: hero_attack_boost
+    # 工程机器人
+    - offset: 7
+      size: 1
+      type: uint8
+      description: 对方工程机器人回血增益
+      name: engineer_health_regen
+    - offset: 8
+      size: 2
+      type: uint16
+      description: 对方工程机器人射击热量冷却增益
+      name: engineer_cooling_boost
+    - offset: 10
+      size: 1
+      type: uint8
+      description: 对方工程机器人防御增益
+      name: engineer_defense_boost
+    - offset: 11
+      size: 1
+      type: uint8
+      description: 对方工程机器人负防御增益
+      name: engineer_defense_debuff
+    - offset: 12
+      size: 2
+      type: uint16
+      description: 对方工程机器人攻击增益
+      name: engineer_attack_boost
+    # 3号步兵机器人
+    - offset: 14
+      size: 1
+      type: uint8
+      description: 对方3号步兵机器人回血增益
+      name: infantry_3_health_regen
+    - offset: 15
+      size: 2
+      type: uint16
+      description: 对方3号步兵机器人射击热量冷却增益
+      name: infantry_3_cooling_boost
+    - offset: 17
+      size: 1
+      type: uint8
+      description: 对方3号步兵机器人防御增益
+      name: infantry_3_defense_boost
+    - offset: 18
+      size: 1
+      type: uint8
+      description: 对方3号步兵机器人负防御增益
+      name: infantry_3_defense_debuff
+    - offset: 19
+      size: 2
+      type: uint16
+      description: 对方3号步兵机器人攻击增益
+      name: infantry_3_attack_boost
+    # 4号步兵机器人
+    - offset: 21
+      size: 1
+      type: uint8
+      description: 对方4号步兵机器人回血增益
+      name: infantry_4_health_regen
+    - offset: 22
+      size: 2
+      type: uint16
+      description: 对方4号步兵机器人射击热量冷却增益
+      name: infantry_4_cooling_boost
+    - offset: 24
+      size: 1
+      type: uint8
+      description: 对方4号步兵机器人防御增益
+      name: infantry_4_defense_boost
+    - offset: 25
+      size: 1
+      type: uint8
+      description: 对方4号步兵机器人负防御增益
+      name: infantry_4_defense_debuff
+    - offset: 26
+      size: 2
+      type: uint16
+      description: 对方4号步兵机器人攻击增益
+      name: infantry_4_attack_boost
+    # 哨兵机器人
+    - offset: 28
+      size: 1
+      type: uint8
+      description: 对方哨兵机器人回血增益
+      name: sentry_health_regen
+    - offset: 29
+      size: 2
+      type: uint16
+      description: 对方哨兵机器人射击热量冷却增益
+      name: sentry_cooling_boost
+    - offset: 31
+      size: 1
+      type: uint8
+      description: 对方哨兵机器人防御增益
+      name: sentry_defense_boost
+    - offset: 32
+      size: 1
+      type: uint8
+      description: 对方哨兵机器人负防御增益
+      name: sentry_defense_debuff
+    - offset: 33
+      size: 2
+      type: uint16
+      description: 对方哨兵机器人攻击增益
+      name: sentry_attack_boost
+    - offset: 35
+      size: 1
+      type: uint8
+      description: 对方哨兵机器人当前姿态
+      name: sentry_posture
+
+- cmd_id: 0x0A06
+  name: EnemyInterferenceKey
+  description: 对方干扰波密钥（6字节ASCII）
+  length: 6
+  fields:
+    - offset: 0
+      size: 6
+      type: char[6]
+      description: 每个字节均为 ASCII 码编码的字母或数字
+      name: key
