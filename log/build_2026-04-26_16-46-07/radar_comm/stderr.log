@@ -1,8 +1,0 @@
-/home/moci/radar_serial/src/radar_comm/src/ros/serial_node.cpp: In constructor ‘SerialNode::SerialNode()’:
-/home/moci/radar_serial/src/radar_comm/src/ros/serial_node.cpp:42:23: error: ‘port’ was not declared in this scope; did you mean ‘port_’?
-   42 |     if (!serial_.open(port, baud_)) {
-      |                       ^~~~
-      |                       port_
-gmake[2]: *** [CMakeFiles/serial_node.dir/build.make:76：CMakeFiles/serial_node.dir/src/ros/serial_node.cpp.o] 错误 1
-gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/serial_node.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2
