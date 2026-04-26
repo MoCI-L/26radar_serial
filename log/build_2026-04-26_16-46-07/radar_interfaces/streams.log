@@ -1,0 +1,254 @@
+[30.030s] Invoking command in '/home/moci/radar_serial/build/radar_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_interfaces -- -j16 -l16
+[30.051s] [  1%] Built target radar_interfaces__cpp
+[30.051s] [  2%] Built target radar_interfaces__rs
+[30.051s] [ 13%] Built target radar_interfaces__rosidl_generator_c
+[30.054s] [ 13%] Built target ament_cmake_python_copy_radar_interfaces
+[30.061s] [ 41%] Built target radar_interfaces__rosidl_typesupport_introspection_c
+[30.061s] [ 41%] Built target radar_interfaces__rosidl_typesupport_fastrtps_cpp
+[30.061s] [ 47%] Built target radar_interfaces__rosidl_typesupport_cpp
+[30.061s] [ 58%] Built target radar_interfaces__rosidl_typesupport_introspection_cpp
+[30.061s] [ 79%] Built target radar_interfaces__rosidl_typesupport_c
+[30.061s] [ 80%] Built target radar_interfaces__rosidl_typesupport_fastrtps_c
+[30.070s] [ 80%] Built target radar_interfaces
+[30.080s] [ 81%] Built target radar_interfaces__py
+[30.092s] [ 91%] Built target radar_interfaces__rosidl_generator_py
+[30.102s] [ 94%] Built target radar_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[30.102s] [ 97%] Built target radar_interfaces__rosidl_typesupport_c__pyext
+[30.102s] [100%] Built target radar_interfaces__rosidl_typesupport_introspection_c__pyext
+[30.199s] running egg_info
+[30.199s] writing radar_interfaces.egg-info/PKG-INFO
+[30.199s] writing dependency_links to radar_interfaces.egg-info/dependency_links.txt
+[30.199s] writing top-level names to radar_interfaces.egg-info/top_level.txt
+[30.201s] reading manifest file 'radar_interfaces.egg-info/SOURCES.txt'
+[30.201s] writing manifest file 'radar_interfaces.egg-info/SOURCES.txt'
+[30.217s] [100%] Built target ament_cmake_python_build_radar_interfaces_egg
+[30.222s] Invoked command in '/home/moci/radar_serial/build/radar_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_interfaces -- -j16 -l16
+[30.227s] Invoking command in '/home/moci/radar_serial/build/radar_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/moci/radar_serial/build/radar_interfaces
+[30.229s] -- Install configuration: ""
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/rosidl_interfaces/radar_interfaces
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_hp.h
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.h
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__struct.h
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__functions.c
+[30.229s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__struct.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__functions.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__struct.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__functions.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__functions.c
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__struct.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__functions.h
+[30.230s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__functions.c
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__functions.c
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__functions.c
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__struct.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__struct.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__functions.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__functions.c
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__functions.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__functions.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_position.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_generator_c__visibility_control.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/buffs.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/macro_status.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/interference_key.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_ammo.h
+[30.231s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/library_path.sh
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/library_path.dsv
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_generator_c.so
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_fastrtps_c.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_fastrtps_c.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_fastrtps_c.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_fastrtps_c.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_fastrtps_c.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_fastrtps_c.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[30.232s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_fastrtps_c.so
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.c
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_introspection_c.h
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.c
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_introspection_c.h
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.c
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_introspection_c.h
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_introspection_c.h
+[30.233s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_introspection_c.h
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.c
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.c
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_introspection_c.h
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.c
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_introspection_c.so
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_c.so
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_ammo.hpp
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/macro_status.hpp
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/interference_key.hpp
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__struct.hpp
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__traits.hpp
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__struct.hpp
+[30.234s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__traits.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__builder.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__traits.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__traits.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__struct.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__struct.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__builder.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__builder.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__traits.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__builder.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__builder.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__builder.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__traits.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__struct.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__struct.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_position.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_hp.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/buffs.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/dds_fastrtps
+[30.235s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_fastrtps_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_fastrtps_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_fastrtps_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_fastrtps_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_fastrtps_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_fastrtps_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_introspection_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.cpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.cpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_introspection_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_introspection_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.cpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_introspection_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.cpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_introspection_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_introspection_cpp.hpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.cpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.cpp
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_introspection_cpp.so
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_cpp.so
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/pythonpath.sh
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/pythonpath.dsv
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info
+[30.236s] -- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/SOURCES.txt
+[30.236s] -- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/PKG-INFO
+[30.236s] -- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/dependency_links.txt
+[30.236s] -- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/top_level.txt
+[30.236s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_c.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/libradar_interfaces__rosidl_generator_py.so
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/__init__.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_ammo.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_interference_key_s.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_interference_key.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_buffs_s.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_position.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_hp.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_macro_status.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_buffs.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_ammo_s.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/__init__.py
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_hp_s.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_position_s.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_macro_status_s.c
+[30.237s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[30.254s] Listing '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces'...
+[30.255s] Listing '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg'...
+[30.257s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[30.258s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[30.258s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[30.258s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_generator_py.so
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/rust_packages/radar_interfaces
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/Cargo.toml
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/build.rs
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/msg.rs
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/lib.rs
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/msg
+[30.259s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/msg/rmw.rs
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyPosition.idl
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyHP.idl
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyAmmo.idl
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/MacroStatus.idl
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/Buffs.idl
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/InterferenceKey.idl
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyPosition.msg
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyHP.msg
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyAmmo.msg
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/MacroStatus.msg
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/Buffs.msg
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/InterferenceKey.msg
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/package_run_dependencies/radar_interfaces
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/parent_prefix_path/radar_interfaces
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/ament_prefix_path.sh
+[30.260s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/ament_prefix_path.dsv
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/path.sh
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/path.dsv
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.bash
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.sh
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.zsh
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.dsv
+[30.261s] -- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/package.dsv
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/packages/radar_interfaces
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_cExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_cExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_cppExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cppExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_pyExport.cmake
+[30.261s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/rosidl_cmake-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfacesConfig.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfacesConfig-version.cmake
+[30.262s] -- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/package.xml
+[30.263s] Invoked command in '/home/moci/radar_serial/build/radar_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/moci/radar_serial/build/radar_interfaces

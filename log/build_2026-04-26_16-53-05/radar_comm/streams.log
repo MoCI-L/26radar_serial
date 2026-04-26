@@ -1,0 +1,30 @@
+[0.009s] Invoking command in '/home/moci/radar_serial/build/radar_comm': AMENT_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib PYTHONPATH=/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_comm -- -j16 -l16
+[0.022s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.178s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.213s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.215s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.222s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.232s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.243s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.277s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.279s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.380s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.435s] -- Found radar_interfaces: 0.1.0 (/home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake)
+[0.487s] -- Configuring done (0.5s)
+[0.491s] CMake Error at CMakeLists.txt:29 (add_executable):
+[0.491s]   Cannot find source file:
+[0.491s] 
+[0.491s]     tools/fake_sender.cpp
+[0.491s] 
+[0.491s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[0.491s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[0.492s]   .f95 .f03 .hip .ispc
+[0.492s] 
+[0.492s] 
+[0.492s] CMake Error at CMakeLists.txt:29 (add_executable):
+[0.492s]   No SOURCES given to target: fake_sender
+[0.492s] 
+[0.492s] 
+[0.492s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[0.497s] gmake: *** [Makefile:481：cmake_check_build_system] 错误 1
+[0.498s] Invoked command in '/home/moci/radar_serial/build/radar_comm' returned '2': AMENT_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib PYTHONPATH=/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_comm -- -j16 -l16

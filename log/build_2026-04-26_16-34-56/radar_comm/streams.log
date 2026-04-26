@@ -1,0 +1,29 @@
+[0.011s] Invoking command in '/home/moci/radar_serial/build/radar_comm': CMAKE_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:/home/moci/radar_serial/install/radar_comm:/opt/ros/humble LD_LIBRARY_PATH=/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib:/usr/local/TensorRT-10.6.0.26/lib /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_comm -- -j16 -l16
+[0.032s] [ 33%] Built target test_parser
+[0.032s] [ 66%] Built target test_serial
+[0.041s] [ 72%] [32mBuilding CXX object CMakeFiles/serial_node.dir/src/ros/serial_node.cpp.o[0m
+[4.041s] [ 77%] [32m[1mLinking CXX executable serial_node[0m
+[4.209s] [100%] Built target serial_node
+[4.213s] Invoked command in '/home/moci/radar_serial/build/radar_comm' returned '0': CMAKE_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:/home/moci/radar_serial/install/radar_comm:/opt/ros/humble LD_LIBRARY_PATH=/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib:/usr/local/TensorRT-10.6.0.26/lib /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_comm -- -j16 -l16
+[4.218s] Invoking command in '/home/moci/radar_serial/build/radar_comm': CMAKE_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:/home/moci/radar_serial/install/radar_comm:/opt/ros/humble LD_LIBRARY_PATH=/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib:/usr/local/TensorRT-10.6.0.26/lib /usr/local/bin/cmake --install /home/moci/radar_serial/build/radar_comm
+[4.219s] -- Install configuration: ""
+[4.219s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/test_parser
+[4.219s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/test_serial
+[4.220s] -- Installing: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/serial_node
+[4.222s] -- Set runtime path of "/home/moci/radar_serial/install/radar_comm/lib/radar_comm/serial_node" to ""
+[4.222s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/ament_index/resource_index/package_run_dependencies/radar_comm
+[4.222s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/ament_index/resource_index/parent_prefix_path/radar_comm
+[4.222s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/ament_prefix_path.sh
+[4.222s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/ament_prefix_path.dsv
+[4.222s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/path.sh
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/path.dsv
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.bash
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.sh
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.zsh
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.dsv
+[4.223s] -- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/package.dsv
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/ament_index/resource_index/packages/radar_comm
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/cmake/radar_commConfig.cmake
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/cmake/radar_commConfig-version.cmake
+[4.223s] -- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/package.xml
+[4.224s] Invoked command in '/home/moci/radar_serial/build/radar_comm' returned '0': CMAKE_PREFIX_PATH=/home/moci/radar_serial/install/radar_interfaces:/home/moci/radar_serial/install/radar_comm:/opt/ros/humble LD_LIBRARY_PATH=/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib:/usr/local/TensorRT-10.6.0.26/lib /usr/local/bin/cmake --install /home/moci/radar_serial/build/radar_comm

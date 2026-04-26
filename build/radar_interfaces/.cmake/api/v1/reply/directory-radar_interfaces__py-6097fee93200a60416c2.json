@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "radar_interfaces__py",
+		"source" : "/home/moci/radar_serial/build/radar_interfaces/radar_interfaces__py"
+	}
+}

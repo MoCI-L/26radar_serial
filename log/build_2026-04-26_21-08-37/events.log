@@ -1,0 +1,746 @@
+[0.000000] (-) TimerEvent: {}
+[0.000064] (radar_interfaces) JobQueued: {'identifier': 'radar_interfaces', 'dependencies': OrderedDict()}
+[0.000084] (radar_comm) JobQueued: {'identifier': 'radar_comm', 'dependencies': OrderedDict([('radar_interfaces', '/home/moci/radar_serial/install/radar_interfaces')])}
+[0.000101] (radar_interfaces) JobStarted: {'identifier': 'radar_interfaces'}
+[0.009135] (radar_interfaces) JobProgress: {'identifier': 'radar_interfaces', 'progress': 'cmake'}
+[0.009633] (radar_interfaces) JobProgress: {'identifier': 'radar_interfaces', 'progress': 'build'}
+[0.010203] (radar_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/moci/radar_serial/build/radar_interfaces', '--', '-j16', '-l16'], 'cwd': '/home/moci/radar_serial/build/radar_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda-12.2/lib64:'), ('VSCODE_CWD', '/home/moci'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'moci'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","messagesFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679/nls.messages.json","corruptMarkerFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","_cacheRoot":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_resolvedLanguagePackCoreLocation":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679","_corruptedFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib::/usr/local/TensorRT-10.6.0.26/lib'), ('HOME', '/home/moci'), ('Ort_INCLUDE_DIR', '/home/moci/onnxruntime-linux-x64-1.17.1/include'), ('CHROME_DESKTOP', 'code.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-2b3525d7-1.11-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1619'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '1926'), ('Ort_LIB', '/home/moci/onnxruntime-linux-x64-1.17.1/lib/libonnxruntime.so'), ('NO_COLOR', '1'), ('ncnn_DIR', '/home/moci/ncnn/build/install/lib/cmake/ncnn'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '24243'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/moci/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.110.2026041514/translations/extensions/vscode.markdown-language-features.i18n.json'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'moci'), ('JOURNAL_STREAM', '8:16081'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'moci'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/home/moci/.local/bin:/opt/MVS/bin:/home/moci/.codex/tmp/arg0/codex-arg0PdCOVz:/home/moci/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/cmake/bin:/opt/MVS/bin:/home/moci/.local/bin:/opt/MVS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/moci/.vscode/extensions/openai.chatgpt-26.422.30944-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/L:@/tmp/.ICE-unix/1899,unix/L:/tmp/.ICE-unix/1899'), ('INVOCATION_ID', '288b107474974d7fb23605f29d5d41bf'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('TENSORRT_ROOT', '/usr/local/TensorRT-10.6.0.26'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019dc9e0-862f-74f2-9b12-ef20127244fd'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/moci/radar_serial/build/radar_interfaces'), ('LC_ALL', 'C.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-12.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/moci/.config/Code/CachedData/560a9dba96f961efea7b1612916f89e5d5d4d679'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/moci/.grc_gnuradio:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('VSCODE_PID', '24243'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.035183] (radar_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099305] (-) TimerEvent: {}
+[0.185990] (radar_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.187920] (radar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.190658] (radar_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.199398] (-) TimerEvent: {}
+[0.222980] (radar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.299554] (-) TimerEvent: {}
+[0.399781] (-) TimerEvent: {}
+[0.499971] (-) TimerEvent: {}
+[0.546866] (radar_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.600115] (-) TimerEvent: {}
+[0.700312] (-) TimerEvent: {}
+[0.800485] (-) TimerEvent: {}
+[0.824224] (radar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.900618] (-) TimerEvent: {}
+[1.000811] (-) TimerEvent: {}
+[1.101003] (-) TimerEvent: {}
+[1.193845] (radar_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.195568] (radar_interfaces) StderrLine: {'line': b'CMake Warning (dev) at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:20 (find_package):\n'}
+[1.195671] (radar_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.195715] (radar_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.195752] (radar_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.195785] (radar_interfaces) StderrLine: {'line': b'\n'}
+[1.195818] (radar_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.195853] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.195887] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.195920] (radar_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[1.195953] (radar_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.195986] (radar_interfaces) StderrLine: {'line': b'\n'}
+[1.201097] (-) TimerEvent: {}
+[1.210157] (radar_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.210488] (radar_interfaces) StderrLine: {'line': b'CMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:52 (find_package):\n'}
+[1.210542] (radar_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.210577] (radar_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.210611] (radar_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.210643] (radar_interfaces) StderrLine: {'line': b'\n'}
+[1.210676] (radar_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.210709] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[1.210741] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.210773] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.210805] (radar_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[1.210835] (radar_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.210867] (radar_interfaces) StderrLine: {'line': b'\n'}
+[1.224792] (radar_interfaces) StderrLine: {'line': b'CMake Warning (dev) at /opt/ros/humble/share/python_cmake_module/cmake/Modules/FindPythonExtra.cmake:140 (find_package):\n'}
+[1.224985] (radar_interfaces) StderrLine: {'line': b'  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules\n'}
+[1.225076] (radar_interfaces) StderrLine: {'line': b'  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use\n'}
+[1.225154] (radar_interfaces) StderrLine: {'line': b'  the cmake_policy command to set the policy and suppress this warning.\n'}
+[1.225224] (radar_interfaces) StderrLine: {'line': b'\n'}
+[1.225293] (radar_interfaces) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.225351] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:23 (find_package)\n'}
+[1.225428] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.225496] (radar_interfaces) StderrLine: {'line': b'  /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.225556] (radar_interfaces) StderrLine: {'line': b'  CMakeLists.txt:26 (rosidl_generate_interfaces)\n'}
+[1.225613] (radar_interfaces) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[1.225668] (radar_interfaces) StderrLine: {'line': b'\n'}
+[1.226788] (radar_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.226838] (radar_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.226869] (radar_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.301243] (-) TimerEvent: {}
+[1.334384] (radar_interfaces) StdoutLine: {'line': b'-- Configuring done (1.3s)\n'}
+[1.369795] (radar_interfaces) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.378397] (radar_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/moci/radar_serial/build/radar_interfaces\n'}
+[1.390264] (radar_interfaces) StdoutLine: {'line': b'[  1%] Generating C code for ROS interfaces\n'}
+[1.393791] (radar_interfaces) StdoutLine: {'line': b'[  2%] Generating Rust code for ROS interfaces\n'}
+[1.394576] (radar_interfaces) StdoutLine: {'line': b'[  2%] Generating C++ code for ROS interfaces\n'}
+[1.397010] (radar_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_radar_interfaces\n'}
+[1.401342] (-) TimerEvent: {}
+[1.501493] (-) TimerEvent: {}
+[1.550703] (radar_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[1.551135] (radar_interfaces) StdoutLine: {'line': b'writing radar_interfaces.egg-info/PKG-INFO\n'}
+[1.551279] (radar_interfaces) StdoutLine: {'line': b'writing dependency_links to radar_interfaces.egg-info/dependency_links.txt\n'}
+[1.551387] (radar_interfaces) StdoutLine: {'line': b'writing top-level names to radar_interfaces.egg-info/top_level.txt\n'}
+[1.553261] (radar_interfaces) StdoutLine: {'line': b"reading manifest file 'radar_interfaces.egg-info/SOURCES.txt'\n"}
+[1.553674] (radar_interfaces) StdoutLine: {'line': b"writing manifest file 'radar_interfaces.egg-info/SOURCES.txt'\n"}
+[1.572871] (radar_interfaces) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_radar_interfaces_egg\n'}
+[1.601607] (-) TimerEvent: {}
+[1.701806] (-) TimerEvent: {}
+[1.749643] (radar_interfaces) StdoutLine: {'line': b'[  2%] Built target radar_interfaces__rs\n'}
+[1.801951] (-) TimerEvent: {}
+[1.902195] (-) TimerEvent: {}
+[1.925295] (radar_interfaces) StdoutLine: {'line': b'[  2%] Built target radar_interfaces__cpp\n'}
+[1.929327] (radar_interfaces) StdoutLine: {'line': b'[  3%] Generating C++ introspection for ROS interfaces\n'}
+[1.929477] (radar_interfaces) StdoutLine: {'line': b'[  4%] Generating C++ type support for eProsima Fast-RTPS\n'}
+[1.929566] (radar_interfaces) StdoutLine: {'line': b'[  5%] Generating C++ type support dispatch for ROS interfaces\n'}
+[1.933161] (radar_interfaces) StdoutLine: {'line': b'[  7%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/enemy_position__functions.c.o\n'}
+[1.933325] (radar_interfaces) StdoutLine: {'line': b'[  7%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/enemy_hp__functions.c.o\n'}
+[1.933487] (radar_interfaces) StdoutLine: {'line': b'[  8%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/enemy_ammo__functions.c.o\n'}
+[1.933797] (radar_interfaces) StdoutLine: {'line': b'[ 10%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/macro_status__functions.c.o\n'}
+[1.933883] (radar_interfaces) StdoutLine: {'line': b'[ 10%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/buffs__functions.c.o\n'}
+[1.934339] (radar_interfaces) StdoutLine: {'line': b'[ 11%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/interference_key__functions.c.o\n'}
+[1.935030] (radar_interfaces) StdoutLine: {'line': b'[ 12%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/radar_mark_progress__functions.c.o\n'}
+[1.935134] (radar_interfaces) StdoutLine: {'line': b'[ 13%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/radar_info__functions.c.o\n'}
+[1.935195] (radar_interfaces) StdoutLine: {'line': b'[ 14%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/map_robot_data__functions.c.o\n'}
+[1.935252] (radar_interfaces) StdoutLine: {'line': b'[ 15%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_c.dir/rosidl_generator_c/radar_interfaces/msg/detail/radar_decision_command__functions.c.o\n'}
+[1.990908] (radar_interfaces) StdoutLine: {'line': b'[ 16%] Linking C shared library libradar_interfaces__rosidl_generator_c.so\n'}
+[2.002298] (-) TimerEvent: {}
+[2.014909] (radar_interfaces) StdoutLine: {'line': b'[ 16%] Built target radar_interfaces__rosidl_generator_c\n'}
+[2.019011] (radar_interfaces) StdoutLine: {'line': b'[ 18%] Generating C type support for eProsima Fast-RTPS\n'}
+[2.019148] (radar_interfaces) StdoutLine: {'line': b'[ 18%] Generating C type support dispatch for ROS interfaces\n'}
+[2.019366] (radar_interfaces) StdoutLine: {'line': b'[ 19%] Generating C introspection for ROS interfaces\n'}
+[2.102412] (-) TimerEvent: {}
+[2.202613] (-) TimerEvent: {}
+[2.302826] (-) TimerEvent: {}
+[2.338451] (radar_interfaces) StdoutLine: {'line': b'[ 21%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/enemy_ammo__type_support.cpp.o\n'}
+[2.338615] (radar_interfaces) StdoutLine: {'line': b'[ 21%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/enemy_position__type_support.cpp.o\n'}
+[2.338685] (radar_interfaces) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/enemy_hp__type_support.cpp.o\n'}
+[2.338948] (radar_interfaces) StdoutLine: {'line': b'[ 23%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/macro_status__type_support.cpp.o\n'}
+[2.339105] (radar_interfaces) StdoutLine: {'line': b'[ 24%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/buffs__type_support.cpp.o\n'}
+[2.339218] (radar_interfaces) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/interference_key__type_support.cpp.o\n'}
+[2.339497] (radar_interfaces) StdoutLine: {'line': b'[ 26%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/radar_mark_progress__type_support.cpp.o\n'}
+[2.339941] (radar_interfaces) StdoutLine: {'line': b'[ 27%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/map_robot_data__type_support.cpp.o\n'}
+[2.340020] (radar_interfaces) StdoutLine: {'line': b'[ 28%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/radar_info__type_support.cpp.o\n'}
+[2.340156] (radar_interfaces) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/radar_interfaces/msg/radar_decision_command__type_support.cpp.o\n'}
+[2.403146] (-) TimerEvent: {}
+[2.431526] (radar_interfaces) StdoutLine: {'line': b'[ 30%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/enemy_position__type_support.cpp.o\n'}
+[2.431735] (radar_interfaces) StdoutLine: {'line': b'[ 31%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/enemy_hp__type_support.cpp.o\n'}
+[2.471895] (radar_interfaces) StdoutLine: {'line': b'[ 31%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/enemy_position__type_support.cpp.o\n'}
+[2.503192] (-) TimerEvent: {}
+[2.522957] (radar_interfaces) StdoutLine: {'line': b'[ 32%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/enemy_hp__type_support.cpp.o\n'}
+[2.555558] (radar_interfaces) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/enemy_ammo__type_support.cpp.o\n'}
+[2.599990] (radar_interfaces) StdoutLine: {'line': b'[ 34%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/macro_status__type_support.cpp.o\n'}
+[2.605508] (-) TimerEvent: {}
+[2.619665] (radar_interfaces) StdoutLine: {'line': b'[ 35%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/enemy_position__type_support.cpp.o\n'}
+[2.633550] (radar_interfaces) StdoutLine: {'line': b'[ 36%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/enemy_ammo__type_support.cpp.o\n'}
+[2.644111] (radar_interfaces) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/buffs__type_support.cpp.o\n'}
+[2.644330] (radar_interfaces) StdoutLine: {'line': b'[ 38%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/macro_status__type_support.cpp.o\n'}
+[2.647325] (radar_interfaces) StdoutLine: {'line': b'[ 39%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/enemy_hp__type_support.cpp.o\n'}
+[2.647525] (radar_interfaces) StdoutLine: {'line': b'[ 40%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/enemy_ammo__type_support.cpp.o\n'}
+[2.647592] (radar_interfaces) StdoutLine: {'line': b'[ 41%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/interference_key__type_support.cpp.o\n'}
+[2.647650] (radar_interfaces) StdoutLine: {'line': b'[ 42%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/radar_mark_progress__type_support.cpp.o\n'}
+[2.647868] (radar_interfaces) StdoutLine: {'line': b'[ 43%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/buffs__type_support.cpp.o\n'}
+[2.648759] (radar_interfaces) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/radar_info__type_support.cpp.o\n'}
+[2.650026] (radar_interfaces) StdoutLine: {'line': b'[ 44%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/enemy_position__type_support.c.o\n'}
+[2.660492] (radar_interfaces) StdoutLine: {'line': b'[ 45%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/interference_key__type_support.cpp.o\n'}
+[2.672018] (radar_interfaces) StdoutLine: {'line': b'[ 46%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/radar_mark_progress__type_support.cpp.o\n'}
+[2.675782] (radar_interfaces) StdoutLine: {'line': b'[ 47%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/radar_info__type_support.cpp.o\n'}
+[2.679141] (radar_interfaces) StdoutLine: {'line': b'[ 48%] Linking CXX shared library libradar_interfaces__rosidl_typesupport_cpp.so\n'}
+[2.680797] (radar_interfaces) StdoutLine: {'line': b'[ 49%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/macro_status__type_support.cpp.o\n'}
+[2.682481] (radar_interfaces) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/map_robot_data__type_support.cpp.o\n'}
+[2.682982] (radar_interfaces) StdoutLine: {'line': b'[ 51%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/enemy_hp__type_support.c.o\n'}
+[2.704070] (radar_interfaces) StdoutLine: {'line': b'[ 51%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/enemy_position__type_support_c.cpp.o\n'}
+[2.706721] (-) TimerEvent: {}
+[2.715734] (radar_interfaces) StdoutLine: {'line': b'[ 52%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/enemy_ammo__type_support.c.o\n'}
+[2.716232] (radar_interfaces) StdoutLine: {'line': b'[ 53%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/radar_interfaces/msg/radar_decision_command__type_support.cpp.o\n'}
+[2.723525] (radar_interfaces) StdoutLine: {'line': b'[ 53%] Built target radar_interfaces__rosidl_typesupport_cpp\n'}
+[2.729055] (radar_interfaces) StdoutLine: {'line': b'[ 54%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/buffs__type_support.cpp.o\n'}
+[2.748239] (radar_interfaces) StdoutLine: {'line': b'[ 55%] Linking CXX shared library libradar_interfaces__rosidl_typesupport_c.so\n'}
+[2.753967] (radar_interfaces) StdoutLine: {'line': b'[ 56%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/macro_status__type_support.c.o\n'}
+[2.787035] (radar_interfaces) StdoutLine: {'line': b'[ 57%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/buffs__type_support.c.o\n'}
+[2.792982] (radar_interfaces) StdoutLine: {'line': b'[ 57%] Built target radar_interfaces__rosidl_typesupport_c\n'}
+[2.797772] (radar_interfaces) StdoutLine: {'line': b'[ 58%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/enemy_hp__type_support_c.cpp.o\n'}
+[2.806852] (-) TimerEvent: {}
+[2.822607] (radar_interfaces) StdoutLine: {'line': b'[ 59%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/interference_key__type_support.c.o\n'}
+[2.845929] (radar_interfaces) StdoutLine: {'line': b'[ 60%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/enemy_ammo__type_support_c.cpp.o\n'}
+[2.858691] (radar_interfaces) StdoutLine: {'line': b'[ 61%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/radar_mark_progress__type_support.c.o\n'}
+[2.878130] (radar_interfaces) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/macro_status__type_support_c.cpp.o\n'}
+[2.899933] (radar_interfaces) StdoutLine: {'line': b'[ 63%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/radar_info__type_support.c.o\n'}
+[2.906975] (-) TimerEvent: {}
+[2.932318] (radar_interfaces) StdoutLine: {'line': b'[ 64%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/map_robot_data__type_support.c.o\n'}
+[2.972956] (radar_interfaces) StdoutLine: {'line': b'[ 65%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/radar_interfaces/msg/detail/radar_decision_command__type_support.c.o\n'}
+[3.007540] (-) TimerEvent: {}
+[3.016764] (radar_interfaces) StdoutLine: {'line': b'[ 66%] Linking C shared library libradar_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[3.021109] (radar_interfaces) StdoutLine: {'line': b'[ 67%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/interference_key__type_support.cpp.o\n'}
+[3.028078] (radar_interfaces) StdoutLine: {'line': b'[ 68%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/buffs__type_support_c.cpp.o\n'}
+[3.042778] (radar_interfaces) StdoutLine: {'line': b'[ 69%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/radar_mark_progress__type_support.cpp.o\n'}
+[3.046699] (radar_interfaces) StdoutLine: {'line': b'[ 69%] Built target radar_interfaces__rosidl_typesupport_introspection_c\n'}
+[3.053830] (radar_interfaces) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/radar_info__type_support.cpp.o\n'}
+[3.054148] (radar_interfaces) StdoutLine: {'line': b'[ 71%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/map_robot_data__type_support.cpp.o\n'}
+[3.060935] (radar_interfaces) StdoutLine: {'line': b'[ 72%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/interference_key__type_support_c.cpp.o\n'}
+[3.062843] (radar_interfaces) StdoutLine: {'line': b'[ 73%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/radar_mark_progress__type_support_c.cpp.o\n'}
+[3.065586] (radar_interfaces) StdoutLine: {'line': b'[ 74%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/radar_info__type_support_c.cpp.o\n'}
+[3.076316] (radar_interfaces) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/map_robot_data__type_support_c.cpp.o\n'}
+[3.082249] (radar_interfaces) StdoutLine: {'line': b'[ 76%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/radar_interfaces/msg/detail/dds_fastrtps/radar_decision_command__type_support.cpp.o\n'}
+[3.085341] (radar_interfaces) StdoutLine: {'line': b'[ 77%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/map_robot_data__type_support.cpp.o\n'}
+[3.110507] (-) TimerEvent: {}
+[3.142486] (radar_interfaces) StdoutLine: {'line': b'[ 78%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/radar_interfaces/msg/detail/radar_decision_command__type_support_c.cpp.o\n'}
+[3.146102] (radar_interfaces) StdoutLine: {'line': b'[ 79%] Building CXX object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/radar_interfaces/msg/detail/radar_decision_command__type_support.cpp.o\n'}
+[3.210636] (-) TimerEvent: {}
+[3.310860] (-) TimerEvent: {}
+[3.411097] (-) TimerEvent: {}
+[3.450666] (radar_interfaces) StdoutLine: {'line': b'[ 80%] Linking CXX shared library libradar_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.457084] (radar_interfaces) StdoutLine: {'line': b'[ 81%] Linking CXX shared library libradar_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[3.476367] (radar_interfaces) StdoutLine: {'line': b'[ 82%] Linking CXX shared library libradar_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[3.509081] (radar_interfaces) StdoutLine: {'line': b'[ 82%] Built target radar_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[3.511171] (-) TimerEvent: {}
+[3.516177] (radar_interfaces) StdoutLine: {'line': b'[ 82%] Built target radar_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[3.521670] (radar_interfaces) StdoutLine: {'line': b'[ 82%] Built target radar_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[3.530878] (radar_interfaces) StdoutLine: {'line': b'[ 82%] Built target radar_interfaces\n'}
+[3.541377] (radar_interfaces) StdoutLine: {'line': b'[ 83%] Generating Python code for ROS interfaces\n'}
+[3.611373] (-) TimerEvent: {}
+[3.711624] (-) TimerEvent: {}
+[3.811943] (-) TimerEvent: {}
+[3.912142] (-) TimerEvent: {}
+[4.012364] (-) TimerEvent: {}
+[4.112619] (-) TimerEvent: {}
+[4.212805] (-) TimerEvent: {}
+[4.313021] (-) TimerEvent: {}
+[4.413257] (-) TimerEvent: {}
+[4.463481] (radar_interfaces) StdoutLine: {'line': b'[ 83%] Built target radar_interfaces__py\n'}
+[4.483454] (radar_interfaces) StdoutLine: {'line': b'[ 86%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_buffs_s.c.o\n'}
+[4.483684] (radar_interfaces) StdoutLine: {'line': b'[ 86%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_enemy_position_s.c.o\n'}
+[4.483749] (radar_interfaces) StdoutLine: {'line': b'[ 87%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_enemy_hp_s.c.o\n'}
+[4.483861] (radar_interfaces) StdoutLine: {'line': b'[ 87%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_interference_key_s.c.o\n'}
+[4.483921] (radar_interfaces) StdoutLine: {'line': b'[ 88%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_enemy_ammo_s.c.o\n'}
+[4.484054] (radar_interfaces) StdoutLine: {'line': b'[ 90%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_macro_status_s.c.o\n'}
+[4.484168] (radar_interfaces) StdoutLine: {'line': b'[ 90%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_radar_mark_progress_s.c.o\n'}
+[4.484216] (radar_interfaces) StdoutLine: {'line': b'[ 92%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_radar_info_s.c.o\n'}
+[4.484258] (radar_interfaces) StdoutLine: {'line': b'[ 92%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_map_robot_data_s.c.o\n'}
+[4.484629] (radar_interfaces) StdoutLine: {'line': b'[ 93%] Building C object CMakeFiles/radar_interfaces__rosidl_generator_py.dir/rosidl_generator_py/radar_interfaces/msg/_radar_decision_command_s.c.o\n'}
+[4.513379] (-) TimerEvent: {}
+[4.575800] (radar_interfaces) StdoutLine: {'line': b'[ 94%] Linking C shared library rosidl_generator_py/radar_interfaces/libradar_interfaces__rosidl_generator_py.so\n'}
+[4.599514] (radar_interfaces) StdoutLine: {'line': b'[ 94%] Built target radar_interfaces__rosidl_generator_py\n'}
+[4.609696] (radar_interfaces) StdoutLine: {'line': b'[ 97%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\n'}
+[4.609862] (radar_interfaces) StdoutLine: {'line': b'[ 97%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_c.c.o\n'}
+[4.609910] (radar_interfaces) StdoutLine: {'line': b'[ 97%] Building C object CMakeFiles/radar_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\n'}
+[4.613480] (-) TimerEvent: {}
+[4.678861] (radar_interfaces) StdoutLine: {'line': b'[ 98%] Linking C shared library rosidl_generator_py/radar_interfaces/radar_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.679146] (radar_interfaces) StdoutLine: {'line': b'[ 99%] Linking C shared library rosidl_generator_py/radar_interfaces/radar_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.681926] (radar_interfaces) StdoutLine: {'line': b'[100%] Linking C shared library rosidl_generator_py/radar_interfaces/radar_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.695611] (radar_interfaces) StdoutLine: {'line': b'[100%] Built target radar_interfaces__rosidl_typesupport_c__pyext\n'}
+[4.696686] (radar_interfaces) StdoutLine: {'line': b'[100%] Built target radar_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[4.699866] (radar_interfaces) StdoutLine: {'line': b'[100%] Built target radar_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.705938] (radar_interfaces) CommandEnded: {'returncode': 0}
+[4.706661] (radar_interfaces) JobProgress: {'identifier': 'radar_interfaces', 'progress': 'install'}
+[4.710311] (radar_interfaces) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/moci/radar_serial/build/radar_interfaces'], 'cwd': '/home/moci/radar_serial/build/radar_interfaces', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda-12.2/lib64:'), ('VSCODE_CWD', '/home/moci'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'moci'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","messagesFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679/nls.messages.json","corruptMarkerFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","_cacheRoot":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_resolvedLanguagePackCoreLocation":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679","_corruptedFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib::/usr/local/TensorRT-10.6.0.26/lib'), ('HOME', '/home/moci'), ('Ort_INCLUDE_DIR', '/home/moci/onnxruntime-linux-x64-1.17.1/include'), ('CHROME_DESKTOP', 'code.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-2b3525d7-1.11-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1619'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '1926'), ('Ort_LIB', '/home/moci/onnxruntime-linux-x64-1.17.1/lib/libonnxruntime.so'), ('NO_COLOR', '1'), ('ncnn_DIR', '/home/moci/ncnn/build/install/lib/cmake/ncnn'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '24243'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/moci/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.110.2026041514/translations/extensions/vscode.markdown-language-features.i18n.json'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'moci'), ('JOURNAL_STREAM', '8:16081'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'moci'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/home/moci/.local/bin:/opt/MVS/bin:/home/moci/.codex/tmp/arg0/codex-arg0PdCOVz:/home/moci/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/cmake/bin:/opt/MVS/bin:/home/moci/.local/bin:/opt/MVS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/moci/.vscode/extensions/openai.chatgpt-26.422.30944-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/L:@/tmp/.ICE-unix/1899,unix/L:/tmp/.ICE-unix/1899'), ('INVOCATION_ID', '288b107474974d7fb23605f29d5d41bf'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('TENSORRT_ROOT', '/usr/local/TensorRT-10.6.0.26'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019dc9e0-862f-74f2-9b12-ef20127244fd'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/moci/radar_serial/build/radar_interfaces'), ('LC_ALL', 'C.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-12.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/moci/.config/Code/CachedData/560a9dba96f961efea7b1612916f89e5d5d4d679'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/moci/.grc_gnuradio:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('VSCODE_PID', '24243'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[4.713064] (radar_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.713168] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/rosidl_interfaces/radar_interfaces\n'}
+[4.713297] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces\n'}
+[4.713346] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg\n'}
+[4.713413] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_hp.h\n'}
+[4.713540] (-) TimerEvent: {}
+[4.713557] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/radar_decision_command.h\n'}
+[4.713605] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail\n'}
+[4.713750] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.h\n'}
+[4.713804] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__struct.h\n'}
+[4.713947] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__struct.h\n'}
+[4.714047] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__functions.c\n'}
+[4.714100] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__struct.h\n'}
+[4.714186] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.h\n'}
+[4.714232] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__functions.h\n'}
+[4.714287] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__struct.h\n'}
+[4.714338] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.h\n'}
+[4.714446] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__functions.h\n'}
+[4.714522] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.h\n'}
+[4.714594] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__functions.h\n'}
+[4.714641] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__functions.c\n'}
+[4.714697] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__struct.h\n'}
+[4.714846] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__functions.c\n'}
+[4.714894] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__functions.h\n'}
+[4.714943] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__functions.h\n'}
+[4.715031] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.h\n'}
+[4.715085] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__functions.c\n'}
+[4.715168] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__functions.c\n'}
+[4.715263] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__functions.c\n'}
+[4.715335] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__functions.c\n'}
+[4.715427] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__functions.h\n'}
+[4.715537] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__functions.c\n'}
+[4.715610] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__type_support.h\n'}
+[4.715687] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__type_support.h\n'}
+[4.715759] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__struct.h\n'}
+[4.715822] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__functions.c\n'}
+[4.715891] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__struct.h\n'}
+[4.715950] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__struct.h\n'}
+[4.716030] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__functions.h\n'}
+[4.716096] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__functions.h\n'}
+[4.716181] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__struct.h\n'}
+[4.716245] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.h\n'}
+[4.716321] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__functions.c\n'}
+[4.716404] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__functions.h\n'}
+[4.716497] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__functions.h\n'}
+[4.716581] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__type_support.h\n'}
+[4.716645] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__type_support.h\n'}
+[4.716712] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__struct.h\n'}
+[4.716812] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_position.h\n'}
+[4.716891] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/radar_info.h\n'}
+[4.716966] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.717017] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/buffs.h\n'}
+[4.717091] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/map_robot_data.h\n'}
+[4.717166] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/macro_status.h\n'}
+[4.717235] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/interference_key.h\n'}
+[4.717298] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_ammo.h\n'}
+[4.717362] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/radar_mark_progress.h\n'}
+[4.717430] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/library_path.sh\n'}
+[4.717499] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/library_path.dsv\n'}
+[4.717673] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_generator_c.so\n'}
+[4.717995] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_generator_c.so" to ""\n'}
+[4.718065] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces\n'}
+[4.718097] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg\n'}
+[4.718165] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail\n'}
+[4.718195] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718255] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718315] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718388] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718679] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718716] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718800] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718920] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_fastrtps_c.h\n'}
+[4.718958] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__rosidl_typesupport_fastrtps_c.h\n'}
+[4.719004] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__rosidl_typesupport_fastrtps_c.h\n'}
+[4.719071] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.719168] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[4.719584] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.719623] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces\n'}
+[4.719657] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg\n'}
+[4.719693] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail\n'}
+[4.719780] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__type_support.c\n'}
+[4.719870] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.c\n'}
+[4.719953] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_introspection_c.h\n'}
+[4.719985] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.c\n'}
+[4.720068] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_introspection_c.h\n'}
+[4.720123] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__rosidl_typesupport_introspection_c.h\n'}
+[4.720155] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__type_support.c\n'}
+[4.720231] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__rosidl_typesupport_introspection_c.h\n'}
+[4.720263] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.c\n'}
+[4.720332] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_introspection_c.h\n'}
+[4.720408] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__type_support.c\n'}
+[4.720487] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_introspection_c.h\n'}
+[4.720573] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_introspection_c.h\n'}
+[4.720657] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.c\n'}
+[4.720769] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__rosidl_typesupport_introspection_c.h\n'}
+[4.720832] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.c\n'}
+[4.720939] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__type_support.c\n'}
+[4.721017] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__rosidl_typesupport_introspection_c.h\n'}
+[4.721085] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_introspection_c.h\n'}
+[4.721175] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.c\n'}
+[4.721268] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.721401] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[4.721689] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.721797] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_c.so\n'}
+[4.722044] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[4.722112] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces\n'}
+[4.722143] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg\n'}
+[4.722207] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/radar_mark_progress.hpp\n'}
+[4.722278] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_ammo.hpp\n'}
+[4.722352] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/macro_status.hpp\n'}
+[4.722413] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/interference_key.hpp\n'}
+[4.722500] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/map_robot_data.hpp\n'}
+[4.722573] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail\n'}
+[4.722635] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__struct.hpp\n'}
+[4.722703] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__struct.hpp\n'}
+[4.722789] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__struct.hpp\n'}
+[4.722862] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__traits.hpp\n'}
+[4.722960] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__traits.hpp\n'}
+[4.723040] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__struct.hpp\n'}
+[4.723138] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.hpp\n'}
+[4.723378] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__builder.hpp\n'}
+[4.723527] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.hpp\n'}
+[4.723576] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__traits.hpp\n'}
+[4.723661] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__type_support.hpp\n'}
+[4.723806] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__type_support.hpp\n'}
+[4.723843] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__builder.hpp\n'}
+[4.723877] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__traits.hpp\n'}
+[4.724008] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__traits.hpp\n'}
+[4.724064] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__builder.hpp\n'}
+[4.724167] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__type_support.hpp\n'}
+[4.724261] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__struct.hpp\n'}
+[4.724355] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__struct.hpp\n'}
+[4.724394] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__builder.hpp\n'}
+[4.724566] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__type_support.hpp\n'}
+[4.724626] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__traits.hpp\n'}
+[4.724706] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__builder.hpp\n'}
+[4.724818] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__struct.hpp\n'}
+[4.724881] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.hpp\n'}
+[4.724915] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__traits.hpp\n'}
+[4.724978] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__traits.hpp\n'}
+[4.725055] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__builder.hpp\n'}
+[4.725128] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__builder.hpp\n'}
+[4.725248] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__builder.hpp\n'}
+[4.725640] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__traits.hpp\n'}
+[4.725948] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.hpp\n'}
+[4.726006] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__struct.hpp\n'}
+[4.726069] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__builder.hpp\n'}
+[4.726120] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__builder.hpp\n'}
+[4.726302] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__struct.hpp\n'}
+[4.726407] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.hpp\n'}
+[4.726604] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__traits.hpp\n'}
+[4.726793] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__struct.hpp\n'}
+[4.726829] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.hpp\n'}
+[4.726863] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/radar_decision_command.hpp\n'}
+[4.726895] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/radar_info.hpp\n'}
+[4.727034] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_position.hpp\n'}
+[4.727174] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/enemy_hp.hpp\n'}
+[4.727224] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/buffs.hpp\n'}
+[4.727265] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.727376] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces\n'}
+[4.727409] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg\n'}
+[4.727550] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.727590] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail\n'}
+[4.727625] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/dds_fastrtps\n'}
+[4.727661] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.727691] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.727739] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.727797] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.727903] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.727966] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.728007] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.728044] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.728076] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.728107] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.728195] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.728583] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.728646] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces\n'}
+[4.728717] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg\n'}
+[4.728777] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail\n'}
+[4.728832] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.728898] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__type_support.cpp\n'}
+[4.728957] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.729033] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__type_support.cpp\n'}
+[4.729103] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__type_support.cpp\n'}
+[4.729165] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.729243] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/interference_key__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.729275] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.729350] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_mark_progress__type_support.cpp\n'}
+[4.729502] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__type_support.cpp\n'}
+[4.729596] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__type_support.cpp\n'}
+[4.729696] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/macro_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.729766] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__type_support.cpp\n'}
+[4.729839] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.729965] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_hp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.730035] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_ammo__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.730131] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/enemy_position__type_support.cpp\n'}
+[4.730200] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/buffs__type_support.cpp\n'}
+[4.730275] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/radar_decision_command__type_support.cpp\n'}
+[4.730348] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/include/radar_interfaces/radar_interfaces/msg/detail/map_robot_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.730519] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[4.730866] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.730963] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_cpp.so\n'}
+[4.731239] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[4.731338] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/pythonpath.sh\n'}
+[4.731370] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/pythonpath.dsv\n'}
+[4.731465] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info\n'}
+[4.731546] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.731581] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/PKG-INFO\n'}
+[4.731649] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.731730] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces-0.1.0-py3.10.egg-info/top_level.txt\n'}
+[4.731794] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces\n'}
+[4.731869] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.731943] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[4.732066] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.732183] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/libradar_interfaces__rosidl_generator_py.so\n'}
+[4.732348] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.732480] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.732602] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/__init__.py\n'}
+[4.732678] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg\n'}
+[4.732741] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_ammo.py\n'}
+[4.732810] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_decision_command.py\n'}
+[4.732876] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_interference_key_s.c\n'}
+[4.732941] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_interference_key.py\n'}
+[4.733012] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_mark_progress_s.c\n'}
+[4.733085] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_decision_command_s.c\n'}
+[4.733151] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_buffs_s.c\n'}
+[4.733247] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_position.py\n'}
+[4.733337] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_hp.py\n'}
+[4.733486] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_map_robot_data.py\n'}
+[4.733565] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_info_s.c\n'}
+[4.733634] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_macro_status.py\n'}
+[4.733697] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_buffs.py\n'}
+[4.733795] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_info.py\n'}
+[4.733862] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_mark_progress.py\n'}
+[4.733938] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_ammo_s.c\n'}
+[4.734032] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/__init__.py\n'}
+[4.734116] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_hp_s.c\n'}
+[4.734184] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_map_robot_data_s.c\n'}
+[4.734388] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_position_s.c\n'}
+[4.734427] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_macro_status_s.c\n'}
+[4.734518] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/_radar_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.767137] (radar_interfaces) StdoutLine: {'line': b"Listing '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces'...\n"}
+[4.767348] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/__init__.py'...\n"}
+[4.767562] (radar_interfaces) StdoutLine: {'line': b"Listing '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg'...\n"}
+[4.767709] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/__init__.py'...\n"}
+[4.767799] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_buffs.py'...\n"}
+[4.767878] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_ammo.py'...\n"}
+[4.767952] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_hp.py'...\n"}
+[4.768023] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_enemy_position.py'...\n"}
+[4.768077] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_interference_key.py'...\n"}
+[4.768107] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_macro_status.py'...\n"}
+[4.768138] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_map_robot_data.py'...\n"}
+[4.768167] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_decision_command.py'...\n"}
+[4.768198] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_info.py'...\n"}
+[4.768232] (radar_interfaces) StdoutLine: {'line': b"Compiling '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/msg/_radar_mark_progress.py'...\n"}
+[4.770204] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.770536] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.770731] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.771079] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.771134] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.771435] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages/radar_interfaces/radar_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.771555] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_generator_py.so\n'}
+[4.771782] (radar_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_interfaces/lib/libradar_interfaces__rosidl_generator_py.so" to ""\n'}
+[4.771873] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/rust_packages/radar_interfaces\n'}
+[4.771909] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust\n'}
+[4.771939] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/Cargo.toml\n'}
+[4.772013] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/build.rs\n'}
+[4.772088] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src\n'}
+[4.772119] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/msg.rs\n'}
+[4.772183] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/lib.rs\n'}
+[4.772243] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/msg\n'}
+[4.772314] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/rust/src/msg/rmw.rs\n'}
+[4.772410] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyPosition.idl\n'}
+[4.772494] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyHP.idl\n'}
+[4.772537] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyAmmo.idl\n'}
+[4.772619] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/MacroStatus.idl\n'}
+[4.772664] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/Buffs.idl\n'}
+[4.772745] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/InterferenceKey.idl\n'}
+[4.772773] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/RadarMarkProgress.idl\n'}
+[4.772834] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/RadarInfo.idl\n'}
+[4.772864] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/MapRobotData.idl\n'}
+[4.772937] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/RadarDecisionCommand.idl\n'}
+[4.773038] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyPosition.msg\n'}
+[4.773094] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyHP.msg\n'}
+[4.773150] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/EnemyAmmo.msg\n'}
+[4.773196] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/MacroStatus.msg\n'}
+[4.773239] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/Buffs.msg\n'}
+[4.773292] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/InterferenceKey.msg\n'}
+[4.773323] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/RadarMarkProgress.msg\n'}
+[4.773385] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/RadarInfo.msg\n'}
+[4.773463] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/MapRobotData.msg\n'}
+[4.773527] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/msg/RadarDecisionCommand.msg\n'}
+[4.773574] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/package_run_dependencies/radar_interfaces\n'}
+[4.773650] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/parent_prefix_path/radar_interfaces\n'}
+[4.773683] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/ament_prefix_path.sh\n'}
+[4.773713] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/ament_prefix_path.dsv\n'}
+[4.773793] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/path.sh\n'}
+[4.773825] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/environment/path.dsv\n'}
+[4.773892] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.bash\n'}
+[4.773939] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.sh\n'}
+[4.774002] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.zsh\n'}
+[4.774052] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/local_setup.dsv\n'}
+[4.774121] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/package.dsv\n'}
+[4.774794] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/ament_index/resource_index/packages/radar_interfaces\n'}
+[4.775162] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_cExport.cmake\n'}
+[4.775260] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.775312] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.775346] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.775378] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.775477] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.775513] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[4.775545] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.775574] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_cppExport.cmake\n'}
+[4.775605] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.775771] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.775889] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.775919] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.775948] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[4.775979] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.776011] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_pyExport.cmake\n'}
+[4.776043] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/export_radar_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.776073] (radar_interfaces) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[4.776103] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.776132] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.776163] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.776193] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.776223] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.776251] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.776282] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfacesConfig.cmake\n'}
+[4.776311] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake/radar_interfacesConfig-version.cmake\n'}
+[4.776343] (radar_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/package.xml\n'}
+[4.777186] (radar_interfaces) CommandEnded: {'returncode': 0}
+[4.793217] (radar_interfaces) JobEnded: {'identifier': 'radar_interfaces', 'rc': 0}
+[4.794295] (radar_comm) JobStarted: {'identifier': 'radar_comm'}
+[4.801356] (radar_comm) JobProgress: {'identifier': 'radar_comm', 'progress': 'cmake'}
+[4.801867] (radar_comm) JobProgress: {'identifier': 'radar_comm', 'progress': 'build'}
+[4.802025] (radar_comm) Command: {'cmd': ['/usr/local/bin/cmake', '--build', '/home/moci/radar_serial/build/radar_comm', '--', '-j16', '-l16'], 'cwd': '/home/moci/radar_serial/build/radar_comm', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda-12.2/lib64:'), ('VSCODE_CWD', '/home/moci'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'moci'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","messagesFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679/nls.messages.json","corruptMarkerFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","_cacheRoot":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_resolvedLanguagePackCoreLocation":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679","_corruptedFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib'), ('HOME', '/home/moci'), ('Ort_INCLUDE_DIR', '/home/moci/onnxruntime-linux-x64-1.17.1/include'), ('CHROME_DESKTOP', 'code.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-2b3525d7-1.11-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1619'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '1926'), ('Ort_LIB', '/home/moci/onnxruntime-linux-x64-1.17.1/lib/libonnxruntime.so'), ('NO_COLOR', '1'), ('ncnn_DIR', '/home/moci/ncnn/build/install/lib/cmake/ncnn'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '24243'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/moci/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.110.2026041514/translations/extensions/vscode.markdown-language-features.i18n.json'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'moci'), ('JOURNAL_STREAM', '8:16081'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'moci'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/home/moci/.local/bin:/opt/MVS/bin:/home/moci/.codex/tmp/arg0/codex-arg0PdCOVz:/home/moci/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/cmake/bin:/opt/MVS/bin:/home/moci/.local/bin:/opt/MVS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/moci/.vscode/extensions/openai.chatgpt-26.422.30944-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/L:@/tmp/.ICE-unix/1899,unix/L:/tmp/.ICE-unix/1899'), ('INVOCATION_ID', '288b107474974d7fb23605f29d5d41bf'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('TENSORRT_ROOT', '/usr/local/TensorRT-10.6.0.26'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/moci/radar_serial/install/radar_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019dc9e0-862f-74f2-9b12-ef20127244fd'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/moci/radar_serial/build/radar_comm'), ('LC_ALL', 'C.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-12.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/moci/.config/Code/CachedData/560a9dba96f961efea7b1612916f89e5d5d4d679'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages:/home/moci/.grc_gnuradio:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('VSCODE_PID', '24243'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib'), ('CMAKE_PREFIX_PATH', '/home/moci/radar_serial/install/radar_interfaces:/opt/ros/humble')]), 'shell': False}
+[4.813664] (-) TimerEvent: {}
+[4.820711] (radar_comm) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[4.913771] (-) TimerEvent: {}
+[4.961637] (radar_comm) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[4.998146] (radar_comm) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[5.000302] (radar_comm) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[5.005294] (radar_comm) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[5.012223] (radar_comm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.013846] (-) TimerEvent: {}
+[5.021266] (radar_comm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.053769] (radar_comm) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[5.055285] (radar_comm) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.114013] (-) TimerEvent: {}
+[5.156028] (radar_comm) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.207730] (radar_comm) StdoutLine: {'line': b'-- Found radar_interfaces: 0.1.0 (/home/moci/radar_serial/install/radar_interfaces/share/radar_interfaces/cmake)\n'}
+[5.214132] (-) TimerEvent: {}
+[5.255390] (radar_comm) StdoutLine: {'line': b'-- Configuring done (0.4s)\n'}
+[5.266507] (radar_comm) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[5.269469] (radar_comm) StdoutLine: {'line': b'-- Build files have been written to: /home/moci/radar_serial/build/radar_comm\n'}
+[5.288150] (radar_comm) StdoutLine: {'line': b'[  3%] Building CXX object CMakeFiles/test_parser.dir/test/test_parser.cpp.o\n'}
+[5.288671] (radar_comm) StdoutLine: {'line': b'[  7%] Building CXX object CMakeFiles/test_parser.dir/src/protocol/encoder.cpp.o\n'}
+[5.288787] (radar_comm) StdoutLine: {'line': b'[ 11%] Building CXX object CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o\n'}
+[5.288987] (radar_comm) StdoutLine: {'line': b'[ 14%] Building CXX object CMakeFiles/test_parser.dir/src/protocol/decoder.cpp.o\n'}
+[5.290476] (radar_comm) StdoutLine: {'line': b'[ 18%] Building CXX object CMakeFiles/fake_sender.dir/home/moci/radar_serial/tools/fake_sender.cpp.o\n'}
+[5.290570] (radar_comm) StdoutLine: {'line': b'[ 22%] Building CXX object CMakeFiles/fake_sender.dir/src/protocol/parser.cpp.o\n'}
+[5.290842] (radar_comm) StdoutLine: {'line': b'[ 25%] Building CXX object CMakeFiles/fake_sender.dir/src/protocol/decoder.cpp.o\n'}
+[5.291027] (radar_comm) StdoutLine: {'line': b'[ 29%] Building CXX object CMakeFiles/fake_sender.dir/src/protocol/encoder.cpp.o\n'}
+[5.291503] (radar_comm) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/test_serial.dir/test/test_serial.cpp.o\n'}
+[5.292028] (radar_comm) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/test_serial.dir/src/protocol/parser.cpp.o\n'}
+[5.292142] (radar_comm) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/test_serial.dir/src/protocol/decoder.cpp.o\n'}
+[5.292205] (radar_comm) StdoutLine: {'line': b'[ 44%] Building CXX object CMakeFiles/test_serial.dir/src/protocol/encoder.cpp.o\n'}
+[5.294592] (radar_comm) StdoutLine: {'line': b'[ 48%] Building CXX object CMakeFiles/test_serial.dir/src/transport/serial_port.cpp.o\n'}
+[5.313163] (radar_comm) StdoutLine: {'line': b'[ 59%] Building CXX object CMakeFiles/serial_node.dir/src/protocol/parser.cpp.o\n'}
+[5.313559] (radar_comm) StdoutLine: {'line': b'[ 59%] Building CXX object CMakeFiles/serial_node.dir/src/ros/serial_node.cpp.o\n'}
+[5.313651] (radar_comm) StdoutLine: {'line': b'[ 59%] Building CXX object CMakeFiles/serial_node.dir/src/protocol/decoder.cpp.o\n'}
+[5.314225] (-) TimerEvent: {}
+[5.414436] (-) TimerEvent: {}
+[5.498867] (radar_comm) StdoutLine: {'line': b'[ 62%] Building CXX object CMakeFiles/serial_node.dir/src/protocol/encoder.cpp.o\n'}
+[5.499654] (radar_comm) StdoutLine: {'line': b'[ 66%] Building CXX object CMakeFiles/serial_node.dir/src/transport/serial_port.cpp.o\n'}
+[5.514595] (-) TimerEvent: {}
+[5.516344] (radar_comm) StdoutLine: {'line': b'[ 70%] Building CXX object CMakeFiles/serial_node.dir/src/bridge/radar_bridge_node.cpp.o\n'}
+[5.615498] (-) TimerEvent: {}
+[5.710669] (radar_comm) StdoutLine: {'line': b'[ 74%] Linking CXX executable fake_sender\n'}
+[5.715626] (-) TimerEvent: {}
+[5.741150] (radar_comm) StdoutLine: {'line': b'[ 77%] Linking CXX executable test_parser\n'}
+[5.788243] (radar_comm) StdoutLine: {'line': b'[ 81%] Built target fake_sender\n'}
+[5.815757] (-) TimerEvent: {}
+[5.820621] (radar_comm) StdoutLine: {'line': b'[ 85%] Built target test_parser\n'}
+[5.881377] (radar_comm) StdoutLine: {'line': b'[ 88%] Linking CXX executable test_serial\n'}
+[5.915889] (-) TimerEvent: {}
+[5.949069] (radar_comm) StdoutLine: {'line': b'[ 92%] Built target test_serial\n'}
+[6.016027] (-) TimerEvent: {}
+[6.116281] (-) TimerEvent: {}
+[6.216506] (-) TimerEvent: {}
+[6.316745] (-) TimerEvent: {}
+[6.416971] (-) TimerEvent: {}
+[6.517230] (-) TimerEvent: {}
+[6.617499] (-) TimerEvent: {}
+[6.717728] (-) TimerEvent: {}
+[6.817971] (-) TimerEvent: {}
+[6.918249] (-) TimerEvent: {}
+[7.018519] (-) TimerEvent: {}
+[7.118788] (-) TimerEvent: {}
+[7.218981] (-) TimerEvent: {}
+[7.319213] (-) TimerEvent: {}
+[7.419484] (-) TimerEvent: {}
+[7.519694] (-) TimerEvent: {}
+[7.619904] (-) TimerEvent: {}
+[7.720157] (-) TimerEvent: {}
+[7.820415] (-) TimerEvent: {}
+[7.920693] (-) TimerEvent: {}
+[8.020934] (-) TimerEvent: {}
+[8.121205] (-) TimerEvent: {}
+[8.221493] (-) TimerEvent: {}
+[8.321766] (-) TimerEvent: {}
+[8.422039] (-) TimerEvent: {}
+[8.522295] (-) TimerEvent: {}
+[8.622553] (-) TimerEvent: {}
+[8.722791] (-) TimerEvent: {}
+[8.823038] (-) TimerEvent: {}
+[8.923232] (-) TimerEvent: {}
+[9.023480] (-) TimerEvent: {}
+[9.123739] (-) TimerEvent: {}
+[9.224000] (-) TimerEvent: {}
+[9.324250] (-) TimerEvent: {}
+[9.424478] (-) TimerEvent: {}
+[9.524730] (-) TimerEvent: {}
+[9.624993] (-) TimerEvent: {}
+[9.725232] (-) TimerEvent: {}
+[9.825502] (-) TimerEvent: {}
+[9.925781] (-) TimerEvent: {}
+[10.026048] (-) TimerEvent: {}
+[10.126290] (-) TimerEvent: {}
+[10.226507] (-) TimerEvent: {}
+[10.326760] (-) TimerEvent: {}
+[10.426999] (-) TimerEvent: {}
+[10.527232] (-) TimerEvent: {}
+[10.627438] (-) TimerEvent: {}
+[10.727679] (-) TimerEvent: {}
+[10.827943] (-) TimerEvent: {}
+[10.928196] (-) TimerEvent: {}
+[11.028413] (-) TimerEvent: {}
+[11.128670] (-) TimerEvent: {}
+[11.228919] (-) TimerEvent: {}
+[11.329171] (-) TimerEvent: {}
+[11.429412] (-) TimerEvent: {}
+[11.529670] (-) TimerEvent: {}
+[11.629933] (-) TimerEvent: {}
+[11.730190] (-) TimerEvent: {}
+[11.830392] (-) TimerEvent: {}
+[11.930627] (-) TimerEvent: {}
+[12.030863] (-) TimerEvent: {}
+[12.131096] (-) TimerEvent: {}
+[12.231297] (-) TimerEvent: {}
+[12.331475] (-) TimerEvent: {}
+[12.431665] (-) TimerEvent: {}
+[12.531897] (-) TimerEvent: {}
+[12.632149] (-) TimerEvent: {}
+[12.732392] (-) TimerEvent: {}
+[12.832649] (-) TimerEvent: {}
+[12.932880] (-) TimerEvent: {}
+[13.033132] (-) TimerEvent: {}
+[13.133351] (-) TimerEvent: {}
+[13.233597] (-) TimerEvent: {}
+[13.333819] (-) TimerEvent: {}
+[13.434049] (-) TimerEvent: {}
+[13.534298] (-) TimerEvent: {}
+[13.634545] (-) TimerEvent: {}
+[13.734807] (-) TimerEvent: {}
+[13.835013] (-) TimerEvent: {}
+[13.935207] (-) TimerEvent: {}
+[14.035370] (-) TimerEvent: {}
+[14.135606] (-) TimerEvent: {}
+[14.235844] (-) TimerEvent: {}
+[14.336063] (-) TimerEvent: {}
+[14.436294] (-) TimerEvent: {}
+[14.536491] (-) TimerEvent: {}
+[14.636717] (-) TimerEvent: {}
+[14.736942] (-) TimerEvent: {}
+[14.739629] (radar_comm) StdoutLine: {'line': b'[ 96%] Linking CXX executable serial_node\n'}
+[14.837063] (-) TimerEvent: {}
+[14.937287] (-) TimerEvent: {}
+[15.037528] (-) TimerEvent: {}
+[15.137753] (-) TimerEvent: {}
+[15.177852] (radar_comm) StdoutLine: {'line': b'[100%] Built target serial_node\n'}
+[15.181720] (radar_comm) CommandEnded: {'returncode': 0}
+[15.182373] (radar_comm) JobProgress: {'identifier': 'radar_comm', 'progress': 'install'}
+[15.182589] (radar_comm) Command: {'cmd': ['/usr/local/bin/cmake', '--install', '/home/moci/radar_serial/build/radar_comm'], 'cwd': '/home/moci/radar_serial/build/radar_comm', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LIBRARY_PATH', '/usr/local/cuda-12.2/lib64:'), ('VSCODE_CWD', '/home/moci'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh:en_US:en'), ('USER', 'moci'), ('LC_TIME', 'zh_CN.UTF-8'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","messagesFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679/nls.messages.json","corruptMarkerFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/tcf.json","_cacheRoot":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn","_resolvedLanguagePackCoreLocation":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/560a9dba96f961efea7b1612916f89e5d5d4d679","_corruptedFile":"/home/moci/.config/Code/clp/b3d577d0e0e421f69f6e9379a6ee9c57.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/moci/radar_serial/install/radar_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/opt/openvdb_vendor/lib:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/usr/local/cuda-12.2/lib64:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib:/usr/local/TensorRT-10.6.0.26/lib'), ('HOME', '/home/moci'), ('Ort_INCLUDE_DIR', '/home/moci/onnxruntime-linux-x64-1.17.1/include'), ('CHROME_DESKTOP', 'code.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-2b3525d7-1.11-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1619'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '1926'), ('Ort_LIB', '/home/moci/onnxruntime-linux-x64-1.17.1/lib/libonnxruntime.so'), ('NO_COLOR', '1'), ('ncnn_DIR', '/home/moci/ncnn/build/install/lib/cmake/ncnn'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '24243'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('VSCODE_L10N_BUNDLE_LOCATION', 'file:///home/moci/.vscode/extensions/ms-ceintl.vscode-language-pack-zh-hans-1.110.2026041514/translations/extensions/vscode.markdown-language-features.i18n.json'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'moci'), ('JOURNAL_STREAM', '8:16081'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'moci'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/home/moci/.local/bin:/opt/MVS/bin:/home/moci/.codex/tmp/arg0/codex-arg0PdCOVz:/home/moci/.local/bin:/opt/ros/humble/bin:/usr/local/cuda-12.2/bin:/usr/local/cmake/bin:/opt/MVS/bin:/home/moci/.local/bin:/opt/MVS/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/moci/.vscode/extensions/openai.chatgpt-26.422.30944-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/L:@/tmp/.ICE-unix/1899,unix/L:/tmp/.ICE-unix/1899'), ('INVOCATION_ID', '288b107474974d7fb23605f29d5d41bf'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('CODEX_SANDBOX_NETWORK_DISABLED', '1'), ('LANG', 'C.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('TENSORRT_ROOT', '/usr/local/TensorRT-10.6.0.26'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/moci/radar_serial/install/radar_interfaces:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019dc9e0-862f-74f2-9b12-ef20127244fd'), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/moci/radar_serial/build/radar_comm'), ('LC_ALL', 'C.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-12.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/moci/.config/Code/CachedData/560a9dba96f961efea7b1612916f89e5d5d4d679'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/moci/radar_serial/install/radar_interfaces/local/lib/python3.10/dist-packages:/home/moci/.grc_gnuradio:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('MVCAM_SDK_VERSION', ''), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('MVS_HOME', '/opt/MVS'), ('VSCODE_PID', '24243'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib'), ('CMAKE_PREFIX_PATH', '/home/moci/radar_serial/install/radar_interfaces:/opt/ros/humble')]), 'shell': False}
+[15.185685] (radar_comm) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[15.185873] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/test_parser\n'}
+[15.186554] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/test_serial\n'}
+[15.187191] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/serial_node\n'}
+[15.194613] (radar_comm) StdoutLine: {'line': b'-- Set runtime path of "/home/moci/radar_serial/install/radar_comm/lib/radar_comm/serial_node" to ""\n'}
+[15.194862] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/lib/radar_comm/fake_sender\n'}
+[15.195140] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/config\n'}
+[15.195182] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/config/serial_node.yaml\n'}
+[15.195292] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/docs\n'}
+[15.195328] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/docs/Readme.md\n'}
+[15.195478] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/ament_index/resource_index/package_run_dependencies/radar_comm\n'}
+[15.195524] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/ament_index/resource_index/parent_prefix_path/radar_comm\n'}
+[15.195577] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/ament_prefix_path.sh\n'}
+[15.195716] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/ament_prefix_path.dsv\n'}
+[15.195748] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/path.sh\n'}
+[15.195783] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/environment/path.dsv\n'}
+[15.195888] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.bash\n'}
+[15.196028] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.sh\n'}
+[15.196065] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.zsh\n'}
+[15.196100] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/local_setup.dsv\n'}
+[15.196129] (radar_comm) StdoutLine: {'line': b'-- Installing: /home/moci/radar_serial/install/radar_comm/share/radar_comm/package.dsv\n'}
+[15.196160] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/ament_index/resource_index/packages/radar_comm\n'}
+[15.196189] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/cmake/radar_commConfig.cmake\n'}
+[15.196218] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/cmake/radar_commConfig-version.cmake\n'}
+[15.196249] (radar_comm) StdoutLine: {'line': b'-- Up-to-date: /home/moci/radar_serial/install/radar_comm/share/radar_comm/package.xml\n'}
+[15.196805] (radar_comm) CommandEnded: {'returncode': 0}
+[15.204178] (radar_comm) JobEnded: {'identifier': 'radar_comm', 'rc': 0}
+[15.204573] (-) EventReactorShutdown: {}

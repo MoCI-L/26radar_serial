@@ -1,0 +1,3 @@
+[ 33%] Built target test_parser
+[ 66%] Built target test_serial
+[ 72%] Building CXX object CMakeFiles/serial_node.dir/src/ros/serial_node.cpp.o
