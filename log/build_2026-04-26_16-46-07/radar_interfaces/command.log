@@ -1,4 +1,0 @@
-Invoking command in '/home/moci/radar_serial/build/radar_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_interfaces -- -j16 -l16
-Invoked command in '/home/moci/radar_serial/build/radar_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --build /home/moci/radar_serial/build/radar_interfaces -- -j16 -l16
-Invoking command in '/home/moci/radar_serial/build/radar_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/moci/radar_serial/build/radar_interfaces
-Invoked command in '/home/moci/radar_serial/build/radar_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/local/bin/cmake --install /home/moci/radar_serial/build/radar_interfaces

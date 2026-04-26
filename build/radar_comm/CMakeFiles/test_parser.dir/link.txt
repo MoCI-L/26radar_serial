@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test_parser.dir/test/test_parser.cpp.o CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o CMakeFiles/test_parser.dir/src/protocol/crc.cpp.o CMakeFiles/test_parser.dir/src/protocol/decoder.cpp.o CMakeFiles/test_parser.dir/src/protocol/encoder.cpp.o -o test_parser 

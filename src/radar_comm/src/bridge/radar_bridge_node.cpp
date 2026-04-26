@@ -52,7 +52,7 @@ RadarBridgeNode::~RadarBridgeNode() {
 
 // ---------- 参数声明 ----------
 void RadarBridgeNode::declare_parameters() {
-    this->declare_parameter("port", "/dev/ttyUSB0");
+    this->declare_parameter("port", "/dev/ttyACM0");
     this->declare_parameter("baud_rate", 115200);
     this->declare_parameter("reconnect_interval_ms", 1000);
 }
