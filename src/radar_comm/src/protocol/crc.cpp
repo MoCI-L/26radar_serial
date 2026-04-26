@@ -29,7 +29,7 @@ static const uint8_t CRC8_TAB[256] = {
     0xd7, 0x89, 0x6b, 0x35,
 };
 
-uint8_t get_crc8(uint8_t *data, uint32_t len) {
+uint8_t get_crc8(const uint8_t *data, uint32_t len) {
   uint8_t crc = CRC8_INIT;
   while (len--) {
     crc = CRC8_TAB[crc ^ *data++];
@@ -37,7 +37,7 @@ uint8_t get_crc8(uint8_t *data, uint32_t len) {
   return crc;
 }
 
-bool verify_crc8(uint8_t *data, uint32_t len) {
+bool verify_crc8(const uint8_t *data, uint32_t len) {
   return get_crc8(data, len - 1) == data[len - 1];
 }
 
@@ -73,10 +73,9 @@ static const uint16_t CRC16_TAB[256] = {
     0xc41c, 0xd595, 0xa12a, 0xb0a3, 0x8238, 0x93b1, 0x6b46, 0x7acf, 0x4854,
     0x59dd, 0x2d62, 0x3ceb, 0x0e70, 0x1ff9, 0xf78f, 0xe606, 0xd49d, 0xc514,
     0xb1ab, 0xa022, 0x92b9, 0x8330, 0x7bc7, 0x6a4e, 0x58d5, 0x495c, 0x3de3,
-    0x2c6a, 0x1ef1, 0x0f78
-};
+    0x2c6a, 0x1ef1, 0x0f78};
 
-uint16_t get_crc16(uint8_t *data, uint32_t len) {
+uint16_t get_crc16(const uint8_t *data, uint32_t len) {
   uint16_t crc = CRC16_INIT;
   while (len--) {
     crc = (crc >> 8) ^ CRC16_TAB[(crc ^ *data++) & 0xff];
@@ -84,7 +83,7 @@ uint16_t get_crc16(uint8_t *data, uint32_t len) {
   return crc;
 }
 
-bool verify_crc16(uint8_t *data, uint32_t len) {
+bool verify_crc16(const uint8_t *data, uint32_t len) {
   uint16_t expected = get_crc16(data, len - 2);
   return ((expected & 0xff) == data[len - 2] &&
           ((expected >> 8) & 0xff) == data[len - 1]);

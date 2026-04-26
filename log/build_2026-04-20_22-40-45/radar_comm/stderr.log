@@ -1,8 +1,0 @@
-[01m[K/home/moci/wust_rm/radar_serial/src/radar_comm/src/protocol/parser.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kradar_comm/protocol/ecoder.hpp: 没有那个文件或目录
-    3 | #include [01;31m[K"radar_comm/protocol/ecoder.hpp"[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/test_parser.dir/build.make:90：CMakeFiles/test_parser.dir/src/protocol/parser.cpp.o] 错误 1
-gmake[2]: *** 正在等待未完成的任务....
-gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/test_parser.dir/all] 错误 2
-gmake: *** [Makefile:146：all] 错误 2

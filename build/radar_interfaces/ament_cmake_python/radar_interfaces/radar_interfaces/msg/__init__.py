@@ -1,0 +1,6 @@
+from radar_interfaces.msg._buffs import Buffs  # noqa: F401
+from radar_interfaces.msg._enemy_ammo import EnemyAmmo  # noqa: F401
+from radar_interfaces.msg._enemy_hp import EnemyHP  # noqa: F401
+from radar_interfaces.msg._enemy_position import EnemyPosition  # noqa: F401
+from radar_interfaces.msg._interference_key import InterferenceKey  # noqa: F401
+from radar_interfaces.msg._macro_status import MacroStatus  # noqa: F401

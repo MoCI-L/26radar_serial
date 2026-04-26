@@ -1,46 +1,50 @@
 cmake_minimum_required(VERSION 3.8)
 project(radar_comm)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
+set(CMAKE_CXX_STANDARD 17)
 
-# 依赖
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
+find_package(rcl_interfaces REQUIRED)
+find_package(radar_interfaces REQUIRED)
 
-# ===== 可执行文件 =====
-add_executable(test_parser
-  test/test_parser.cpp
+set(PROTOCOL_SRC
   src/protocol/parser.cpp
   src/protocol/crc.cpp
   src/protocol/decoder.cpp
+  src/protocol/encoder.cpp
 )
 
-target_include_directories(test_parser PUBLIC
-  ${CMAKE_CURRENT_SOURCE_DIR}/include
+set(TRANSPORT_SRC
+  src/transport/serial_port.cpp
 )
 
-target_compile_features(test_parser PUBLIC cxx_std_17)
-
-ament_target_dependencies(test_parser
-  rclcpp
-  std_msgs
+set(BRIDGE_SRC
+  src/bridge/radar_bridge_node.cpp
 )
 
-# ===== 安装 =====
+add_executable(test_parser test/test_parser.cpp ${PROTOCOL_SRC})
+add_executable(test_serial test/test_serial.cpp ${PROTOCOL_SRC} ${TRANSPORT_SRC})
+add_executable(serial_node src/ros/serial_node.cpp ${PROTOCOL_SRC} ${TRANSPORT_SRC} ${BRIDGE_SRC})
+add_executable(fake_sender ../../tools/fake_sender.cpp ${PROTOCOL_SRC})
+
+target_include_directories(test_parser PUBLIC include)
+target_include_directories(test_serial PUBLIC include)
+target_include_directories(serial_node PUBLIC include)
+target_include_directories(fake_sender PUBLIC include)
+
+ament_target_dependencies(serial_node rclcpp rcl_interfaces radar_interfaces)
+
 install(TARGETS
   test_parser
+  test_serial
+  serial_node
+  fake_sender
   DESTINATION lib/${PROJECT_NAME}
 )
 
-# ===== lint（可选）=====
-if(BUILD_TESTING)
-  find_package(ament_lint_auto REQUIRED)
-  set(ament_cmake_copyright_FOUND TRUE)
-  set(ament_cmake_cpplint_FOUND TRUE)
-  ament_lint_auto_find_test_dependencies()
-endif()
+install(DIRECTORY config docs
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_package()

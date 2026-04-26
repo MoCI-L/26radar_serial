@@ -1,17 +1,13 @@
 #pragma once
-#include <variant>
-#include <vector>
 #include <cstdint>
-#include <optional>
+#include <vector>
 
-#include "structs.hpp"
-// 后面继续加
+#include "radar_comm/protocol/cmd_id.hpp"
+#include "radar_comm/protocol/types.hpp"
 
-using ProtocolData = std::variant<
-    EnemyRobotPosition
-    // 后面继续加
->;
+namespace radar_comm {
 
-std::optional<ProtocolData> decode(
-    uint16_t cmd_id,
-    const std::vector<uint8_t>& data);
+ProtocolData decode(uint16_t cmd_id, const std::vector<uint8_t>& payload);
+ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& payload);
+
+} // namespace radar_comm

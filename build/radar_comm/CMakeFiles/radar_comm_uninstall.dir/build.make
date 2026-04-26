@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moci/wust_rm/radar_serial/src/radar_comm
+CMAKE_SOURCE_DIR = /home/moci/radar_serial/src/radar_comm
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moci/wust_rm/radar_serial/build/radar_comm
+CMAKE_BINARY_DIR = /home/moci/radar_serial/build/radar_comm
 
 # Utility rule file for radar_comm_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/radar_comm_uninstall.dir/compiler_depend.make
 include CMakeFiles/radar_comm_uninstall.dir/progress.make
 
 CMakeFiles/radar_comm_uninstall:
-	/usr/local/bin/cmake -P /home/moci/wust_rm/radar_serial/build/radar_comm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/local/bin/cmake -P /home/moci/radar_serial/build/radar_comm/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 radar_comm_uninstall: CMakeFiles/radar_comm_uninstall
 radar_comm_uninstall: CMakeFiles/radar_comm_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/radar_comm_uninstall.dir/clean:
 .PHONY : CMakeFiles/radar_comm_uninstall.dir/clean
 
 CMakeFiles/radar_comm_uninstall.dir/depend:
-	cd /home/moci/wust_rm/radar_serial/build/radar_comm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moci/wust_rm/radar_serial/src/radar_comm /home/moci/wust_rm/radar_serial/src/radar_comm /home/moci/wust_rm/radar_serial/build/radar_comm /home/moci/wust_rm/radar_serial/build/radar_comm /home/moci/wust_rm/radar_serial/build/radar_comm/CMakeFiles/radar_comm_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/moci/radar_serial/build/radar_comm && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moci/radar_serial/src/radar_comm /home/moci/radar_serial/src/radar_comm /home/moci/radar_serial/build/radar_comm /home/moci/radar_serial/build/radar_comm /home/moci/radar_serial/build/radar_comm/CMakeFiles/radar_comm_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/radar_comm_uninstall.dir/depend
 
