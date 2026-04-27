@@ -2,8 +2,14 @@ cmake_minimum_required(VERSION 3.8)
 project(radar_comm)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rcl_interfaces REQUIRED)
 find_package(radar_interfaces REQUIRED)
@@ -35,9 +41,9 @@ target_include_directories(serial_node PUBLIC include)
 target_include_directories(fake_sender PUBLIC include)
 target_include_directories(serial_fake_node PUBLIC include)
 
-ament_target_dependencies(serial_node rclcpp rcl_interfaces radar_interfaces)
+ament_target_dependencies(serial_node builtin_interfaces rclcpp rcl_interfaces radar_interfaces)
 ament_target_dependencies(fake_sender rclcpp rcl_interfaces radar_interfaces)
-ament_target_dependencies(serial_fake_node rclcpp rcl_interfaces radar_interfaces)
+ament_target_dependencies(serial_fake_node builtin_interfaces rclcpp rcl_interfaces radar_interfaces)
 
 install(TARGETS
   test_parser
@@ -48,7 +54,7 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY config docs
+install(DIRECTORY config docs scripts
   DESTINATION share/${PROJECT_NAME}
 )
 

@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 雷达自主决策状态
 uint8 double_vulnerability_chances
 bool opponent_double_vulnerability_active

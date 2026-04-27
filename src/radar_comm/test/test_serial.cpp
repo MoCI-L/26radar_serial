@@ -14,19 +14,16 @@ int main() {
         return -1;
     }
 
-    serial.setCallback([&](uint8_t byte) {
-
-        printf("%02X ", byte);
+    serial.setCallback([&](const uint8_t *data, std::size_t size) {
+        for (std::size_t i = 0; i < size; ++i) {
+            printf("%02X ", data[i]);
+        }
         fflush(stdout);
 
-        auto result = parser.input(byte);
-
-        if (result) {
+        parser.process(data, size, [&](ProtocolParser::ParsedFrame &&parsed) {
             std::cout << "\n[PARSED]\n";
-
-            std::visit([](auto&& data) {
-                using T = std::decay_t<decltype(data)>;
-
+            std::visit([](auto&& msg) {
+                using T = std::decay_t<decltype(msg)>;
                 if constexpr (std::is_same_v<T, EnemyRobotPosition>)
                     std::cout << "Position\n";
                 else if constexpr (std::is_same_v<T, EnemyRobotHP>)
@@ -41,9 +38,8 @@ int main() {
                     std::cout << "Key\n";
                 else
                     std::cout << "Unknown\n";
-
-            }, *result);
-        }
+            }, parsed.data);
+        });
     });
 
     serial.start();

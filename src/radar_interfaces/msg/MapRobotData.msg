@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 雷达发送给己方选手端小地图的双边机器人坐标，单位：cm
 uint16 opponent_hero_x
 uint16 opponent_hero_y

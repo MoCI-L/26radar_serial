@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 对方队伍宏观状态
 uint16 remaining_gold
 uint16 total_gold

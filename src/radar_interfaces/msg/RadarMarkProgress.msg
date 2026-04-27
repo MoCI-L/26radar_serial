@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 雷达标记进度状态，敌方机器人阈值为100，己方机器人阈值为50
 bool enemy_hero_marked
 bool enemy_engineer_marked

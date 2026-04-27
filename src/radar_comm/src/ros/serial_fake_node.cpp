@@ -47,22 +47,18 @@ private:
         stream.insert(stream.end(), frame1->begin(), frame1->end());
         stream.insert(stream.end(), frame2->begin(), frame2->end());
 
-        // 逐个字节喂给解析器
-        for (uint8_t byte : stream) {
-            auto result = parser_->input(byte);
-            if (result.has_value()) {
-                std::visit([this](auto&& arg) {
-                    using T = std::decay_t<decltype(arg)>;
-                    if constexpr (std::is_same_v<T, radar_comm::EnemyRobotPosition>) {
-                        RCLCPP_INFO(this->get_logger(),
-                            "[Recv] Position: hero(%d,%d)", arg.hero_x, arg.hero_y);
-                    } else if constexpr (std::is_same_v<T, radar_comm::RadarInfo>) {
-                        RCLCPP_INFO(this->get_logger(),
-                            "[Recv] RadarInfo: enc_level=%d", arg.encryption_level);
-                    }
-                }, result.value());
-            }
-        }
+        parser_->process(stream.data(), stream.size(), [this](radar_comm::ProtocolParser::ParsedFrame &&parsed) {
+            std::visit([this](auto&& arg) {
+                using T = std::decay_t<decltype(arg)>;
+                if constexpr (std::is_same_v<T, radar_comm::EnemyRobotPosition>) {
+                    RCLCPP_INFO(this->get_logger(),
+                        "[Recv] Position: hero(%d,%d)", arg.hero_x, arg.hero_y);
+                } else if constexpr (std::is_same_v<T, radar_comm::RadarInfo>) {
+                    RCLCPP_INFO(this->get_logger(),
+                        "[Recv] RadarInfo: enc_level=%d", arg.encryption_level);
+                }
+            }, parsed.data);
+        });
     }
 
     void demo_encode_upload() {

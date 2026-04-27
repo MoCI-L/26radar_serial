@@ -3,3 +3,17 @@
     port: "/dev/ttyACM0"
     baud_rate: 115200
     reconnect_interval_ms: 1000
+    frame_timeout_ms: 100
+    watchdog_timeout_ms: 2000
+    epoll_timeout_ms: 100
+    read_buffer_size: 4096
+    debug_enabled: false
+    record_raw: false
+    record_path: "/tmp/radar_serial_raw.bin"
+    best_effort_qos: true
+    data_qos_depth: 16
+    status_qos_depth: 8
+    publish_queue_warn_threshold: 1536
+    rx_cpu_affinity: -1
+    publish_cpu_affinity: -1
+    reconnect_cpu_affinity: -1

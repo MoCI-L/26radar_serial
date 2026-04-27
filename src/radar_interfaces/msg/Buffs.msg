@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 英雄机器人增益
 uint8 hero_health_regen
 uint16 hero_cooling_boost

@@ -1,35 +1,34 @@
 #include <cstring>
-#include <vector>
 
 #include "radar_comm/protocol/decoder.hpp"
 
 namespace radar_comm {
 
 template <typename T>
-T read(const std::vector<uint8_t>& buf, size_t offset) {
+T read(const uint8_t *buf, size_t offset) {
     T value{};
-    std::memcpy(&value, buf.data() + offset, sizeof(T));
+    std::memcpy(&value, buf + offset, sizeof(T));
     return value;
 }
 
-ProtocolData decode(uint16_t cmd_id, const std::vector<uint8_t>& p) {
+DecodeResult decode(uint16_t cmd_id, const uint8_t *payload, std::size_t payload_size) {
     const auto typed_cmd_id = cmd_id_from_uint16(cmd_id);
     if (!typed_cmd_id.has_value()) {
-        return std::monostate{};
+        return {DecodeStatus::UnknownCmd, cmd_id, 0, payload_size, std::monostate{}};
     }
 
-    return decode(*typed_cmd_id, p);
+    return decode(*typed_cmd_id, payload, payload_size);
 }
 
-ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
+DecodeResult decode(CmdID cmd_id, const uint8_t *p, std::size_t payload_size) {
     if (cmd_id == CmdID::RobotInteraction) {
-        if (p.size() != 14) {
-            return std::monostate{};
+        if (payload_size != 14) {
+            return {DecodeStatus::InvalidPayloadLength, to_uint16(cmd_id), 14, payload_size, std::monostate{}};
         }
 
         const uint16_t data_cmd_id = read<uint16_t>(p, 0);
         if (data_cmd_id != kRadarDecisionDataCmdId) {
-            return std::monostate{};
+            return {DecodeStatus::InvalidSubcommand, to_uint16(cmd_id), 14, payload_size, std::monostate{}};
         }
 
         RadarDecisionCommand d{};
@@ -37,12 +36,13 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.receiver_id = read<uint16_t>(p, 4);
         d.double_vulnerability_request = p[6];
         d.password_command_type = p[7];
-        std::memcpy(d.password.data(), p.data() + 8, d.password.size());
-        return d;
+        std::memcpy(d.password.data(), p + 8, d.password.size());
+        return {DecodeStatus::Ok, to_uint16(cmd_id), 14, payload_size, d};
     }
 
-    if (p.size() != expected_payload_length(cmd_id)) {
-        return std::monostate{};
+    if (payload_size != expected_payload_length(cmd_id)) {
+        return {DecodeStatus::InvalidPayloadLength, to_uint16(cmd_id),
+                expected_payload_length(cmd_id), payload_size, std::monostate{}};
     }
 
     switch (cmd_id) {
@@ -72,7 +72,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.ally_aerial_y = read<uint16_t>(p, 42);
         d.ally_sentry_x = read<uint16_t>(p, 44);
         d.ally_sentry_y = read<uint16_t>(p, 46);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::RadarMarkProgress: {
@@ -90,7 +90,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.ally_infantry_4_marked = bits & (1u << 9);
         d.ally_aerial_marked = bits & (1u << 10);
         d.ally_sentry_marked = bits & (1u << 11);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::RadarInfo: {
@@ -100,7 +100,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.opponent_double_vulnerability_active = bits & (1u << 2);
         d.encryption_level = (bits >> 3) & 0x3u;
         d.key_change_enabled = bits & (1u << 5);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::EnemyRobotPosition: {
@@ -117,7 +117,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.aerial_y = read<uint16_t>(p,18);
         d.sentry_x = read<uint16_t>(p,20);
         d.sentry_y = read<uint16_t>(p,22);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::EnemyRobotHP: {
@@ -128,7 +128,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.infantry_4_hp = read<uint16_t>(p,6);
         d.reserved = read<uint16_t>(p,8);
         d.sentry_hp = read<uint16_t>(p,10);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::EnemyRemainingAmmo: {
@@ -138,7 +138,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.infantry_4_ammo = read<uint16_t>(p,4);
         d.aerial_ammo = read<uint16_t>(p,6);
         d.sentry_ammo = read<uint16_t>(p,8);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::EnemyTeamMacroStatus: {
@@ -159,7 +159,7 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.enemy_highland_upper_occupied = bits & (1u << 13);
         d.enemy_jump_upper_occupied = bits & (1u << 14);
         d.enemy_road_upper_occupied = bits & (1u << 15);
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::EnemyRobotBuffs: {
@@ -194,17 +194,17 @@ ProtocolData decode(CmdID cmd_id, const std::vector<uint8_t>& p) {
         d.sentry_defense_debuff = p[32];
         d.sentry_attack_boost = read<uint16_t>(p,33);
         d.sentry_posture = p[35];
-        return d;
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     case CmdID::EnemyInterferenceKey: {
         EnemyInterferenceKey d{};
-        std::memcpy(d.key.data(), p.data(), 6);
-        return d;
+        std::memcpy(d.key.data(), p, 6);
+        return {DecodeStatus::Ok, to_uint16(cmd_id), payload_size, payload_size, d};
     }
 
     default:
-        return std::monostate{};
+        return {DecodeStatus::UnknownCmd, to_uint16(cmd_id), 0, payload_size, std::monostate{}};
     }
 }
 

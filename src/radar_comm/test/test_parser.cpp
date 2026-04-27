@@ -15,21 +15,15 @@ bool round_trip(const radar_comm::ProtocolData& data,
     return false;
   }
 
-  for (const auto byte : *frame) {
-    auto result = parser.input(byte);
-    if (!result.has_value()) {
-      continue;
-    }
-
-    if (const auto* decoded = std::get_if<T>(&result.value()); decoded != nullptr) {
+  bool matched = false;
+  parser.process(frame->data(), frame->size(), [&](radar_comm::ProtocolParser::ParsedFrame &&parsed) {
+    if (const auto* decoded = std::get_if<T>(&parsed.data); decoded != nullptr) {
       (void)expected;
-      return check(*decoded);
+      matched = check(*decoded);
     }
+  });
 
-    return false;
-  }
-
-  return false;
+  return matched;
 }
 
 } // namespace

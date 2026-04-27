@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 敌方所有机器人位置坐标，单位：cm (协议原始单位)
 uint16 hero_x
 uint16 hero_y

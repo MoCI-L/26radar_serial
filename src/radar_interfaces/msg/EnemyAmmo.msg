@@ -1,3 +1,5 @@
+builtin_interfaces/Time stamp
+
 # 敌方剩余允许发弹量
 uint16 hero_ammo
 uint16 infantry_3_ammo
