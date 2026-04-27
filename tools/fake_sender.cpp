@@ -7,7 +7,7 @@
 #include <iostream>
 
 int main(int argc, char** argv) {
-    const std::string port = argc > 1 ? argv[1] : "/dev/pts/9";
+    const std::string port = argc > 1 ? argv[1] : "/dev/pts/3";
 
     int fd = open(port.c_str(), O_WRONLY);
     if (fd < 0) {

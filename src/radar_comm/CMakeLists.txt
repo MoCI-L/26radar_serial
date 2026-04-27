@@ -27,18 +27,23 @@ add_executable(test_parser test/test_parser.cpp ${PROTOCOL_SRC})
 add_executable(test_serial test/test_serial.cpp ${PROTOCOL_SRC} ${TRANSPORT_SRC})
 add_executable(serial_node src/ros/serial_node.cpp ${PROTOCOL_SRC} ${TRANSPORT_SRC} ${BRIDGE_SRC})
 add_executable(fake_sender ../../tools/fake_sender.cpp ${PROTOCOL_SRC})
+add_executable(serial_fake_node src/ros/serial_fake_node.cpp ${PROTOCOL_SRC})
 
 target_include_directories(test_parser PUBLIC include)
 target_include_directories(test_serial PUBLIC include)
 target_include_directories(serial_node PUBLIC include)
 target_include_directories(fake_sender PUBLIC include)
+target_include_directories(serial_fake_node PUBLIC include)
 
 ament_target_dependencies(serial_node rclcpp rcl_interfaces radar_interfaces)
+ament_target_dependencies(fake_sender rclcpp rcl_interfaces radar_interfaces)
+ament_target_dependencies(serial_fake_node rclcpp rcl_interfaces radar_interfaces)
 
 install(TARGETS
   test_parser
   test_serial
   serial_node
+  serial_fake_node
   fake_sender
   DESTINATION lib/${PROJECT_NAME}
 )
