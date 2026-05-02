@@ -16,7 +16,10 @@ if [[ ! -f "${PARAM_FILE}" ]]; then
   exit 1
 fi
 
+# 关闭 -u 以避免 COLCON_TRACE 未定义错误
+set +u
 source "${WORKSPACE_ROOT}/install/setup.bash"
+set -u
 
 echo "[radar_serial] using params: ${PARAM_FILE}"
 exec ros2 run radar_comm serial_node --ros-args --params-file "${PARAM_FILE}"
