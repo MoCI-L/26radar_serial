@@ -3,12 +3,13 @@
 <package format="3">
   <name>radar_comm</name>
   <version>0.0.0</version>
-  <description>RoboMaster radar serial bridge with protocol parsing, ROS2 publishing, and runtime diagnostics.</description>
+  <description>RoboMaster radar/referee transport bridge with protocol parsing, ROS2 publishing, Boost.Asio cross-platform I/O, and runtime diagnostics.</description>
   <maintainer email="liu2336@outlook.com">moci</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <depend>boost</depend>
   <depend>builtin_interfaces</depend>
   <depend>rclcpp</depend>
   <depend>rcl_interfaces</depend>

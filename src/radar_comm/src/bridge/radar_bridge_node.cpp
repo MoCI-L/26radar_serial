@@ -102,18 +102,22 @@ RadarBridgeNode::~RadarBridgeNode() {
   if (publish_thread_.joinable()) {
     publish_thread_.join();
   }
-  disconnect_serial();
+  disconnect_transport();
   if (raw_record_stream_.is_open()) {
     raw_record_stream_.close();
   }
 }
 
 void RadarBridgeNode::declare_parameters() {
+  this->declare_parameter("transport_type", "serial");
   this->declare_parameter("port", "/dev/ttyACM0");
   this->declare_parameter("baud_rate", 115200);
+  this->declare_parameter("tcp_host", "127.0.0.1");
+  this->declare_parameter("tcp_port", 10001);
   this->declare_parameter("reconnect_interval_ms", 1000);
   this->declare_parameter("frame_timeout_ms", 100);
   this->declare_parameter("watchdog_timeout_ms", 2000);
+  this->declare_parameter("transport_poll_timeout_ms", 100);
   this->declare_parameter("epoll_timeout_ms", 100);
   this->declare_parameter("read_buffer_size", 4096);
   this->declare_parameter("debug_enabled", false);
@@ -131,11 +135,34 @@ void RadarBridgeNode::declare_parameters() {
 void RadarBridgeNode::reload_runtime_parameters() {
   const auto old_record_enabled = record_raw_;
   const auto old_record_path = record_path_;
+  radar_comm::TransportConfig::Type transport_type;
+  const auto transport_type_value =
+      this->get_parameter("transport_type").as_string();
+  if (!radar_comm::transport_type_from_string(transport_type_value,
+                                              transport_type)) {
+    RCLCPP_WARN(this->get_logger(),
+                "Unknown transport_type '%s', fallback to serial",
+                transport_type_value.c_str());
+    transport_type = radar_comm::TransportConfig::Type::Serial;
+  }
+
+  transport_config_.type = transport_type;
+  transport_config_.serial_port = this->get_parameter("port").as_string();
+  transport_config_.baud_rate = this->get_parameter("baud_rate").as_int();
+  transport_config_.tcp_host = this->get_parameter("tcp_host").as_string();
+  transport_config_.tcp_port =
+      static_cast<uint16_t>(this->get_parameter("tcp_port").as_int());
   reconnect_interval_ms_ =
       this->get_parameter("reconnect_interval_ms").as_int();
   frame_timeout_ms_ = this->get_parameter("frame_timeout_ms").as_int();
   watchdog_timeout_ms_ = this->get_parameter("watchdog_timeout_ms").as_int();
-  epoll_timeout_ms_ = this->get_parameter("epoll_timeout_ms").as_int();
+  transport_poll_timeout_ms_ =
+      this->get_parameter("transport_poll_timeout_ms").as_int();
+  const auto legacy_poll_timeout =
+      this->get_parameter("epoll_timeout_ms").as_int();
+  if (transport_poll_timeout_ms_ == 100 && legacy_poll_timeout != 100) {
+    transport_poll_timeout_ms_ = legacy_poll_timeout;
+  }
   read_buffer_size_ = this->get_parameter("read_buffer_size").as_int();
   debug_enabled_ = this->get_parameter("debug_enabled").as_bool();
   record_raw_ = this->get_parameter("record_raw").as_bool();
@@ -165,7 +192,9 @@ rcl_interfaces::msg::SetParametersResult RadarBridgeNode::on_parameter_change(
   bool need_reconnect = false;
   for (const auto &p : params) {
     const auto &name = p.get_name();
-    if (name == "port" || name == "baud_rate" || name == "epoll_timeout_ms" ||
+    if (name == "transport_type" || name == "port" || name == "baud_rate" ||
+        name == "tcp_host" || name == "tcp_port" ||
+        name == "transport_poll_timeout_ms" || name == "epoll_timeout_ms" ||
         name == "read_buffer_size" || name == "rx_cpu_affinity") {
       need_reconnect = true;
     }
@@ -175,8 +204,8 @@ rcl_interfaces::msg::SetParametersResult RadarBridgeNode::on_parameter_change(
 
   if (need_reconnect) {
     RCLCPP_INFO(this->get_logger(),
-                "Runtime serial parameters changed, reconnecting");
-    disconnect_serial();
+                "Runtime transport parameters changed, reconnecting");
+    disconnect_transport();
   }
   return result;
 }
@@ -224,51 +253,51 @@ void RadarBridgeNode::bind_current_thread_if_needed(int cpu) {
 #endif
 }
 
-void RadarBridgeNode::disconnect_serial() {
-  std::lock_guard<std::mutex> lock(serial_mutex_);
-  if (serial_) {
-    serial_->stop();
-    serial_.reset();
+void RadarBridgeNode::disconnect_transport() {
+  std::lock_guard<std::mutex> lock(transport_mutex_);
+  if (transport_) {
+    transport_->stop();
+    transport_.reset();
   }
   connected_ = false;
 }
 
-void RadarBridgeNode::connect_serial() {
-  std::lock_guard<std::mutex> lock(serial_mutex_);
-  if (serial_ || !running_) {
+void RadarBridgeNode::connect_transport() {
+  std::lock_guard<std::mutex> lock(transport_mutex_);
+  if (transport_ || !running_) {
     return;
   }
 
   runtime_stats_.reconnect_attempts.fetch_add(1, std::memory_order_relaxed);
 
-  const std::string port = this->get_parameter("port").as_string();
-  const int baud = this->get_parameter("baud_rate").as_int();
-
-  auto serial = std::make_unique<radar_comm::SerialPort>();
-  serial->setBufferSize(static_cast<std::size_t>(read_buffer_size_));
-  serial->setPollTimeoutMs(epoll_timeout_ms_);
-  serial->setCpuAffinity(rx_cpu_affinity_);
-  serial->setDebug(debug_enabled_);
-  serial->setCallback([this](const uint8_t *data, std::size_t size) {
-    handle_serial_chunk(data, size);
+  auto transport = radar_comm::make_asio_transport();
+  transport->setBufferSize(static_cast<std::size_t>(read_buffer_size_));
+  transport->setPollTimeoutMs(transport_poll_timeout_ms_);
+  transport->setCpuAffinity(rx_cpu_affinity_);
+  transport->setDebug(debug_enabled_);
+  transport->setCallback([this](const uint8_t *data, std::size_t size) {
+    handle_transport_chunk(data, size);
   });
-  serial->setDisconnectCallback([this]() { handle_serial_disconnect(); });
+  transport->setDisconnectCallback(
+      [this]() { handle_transport_disconnect(); });
 
-  if (!serial->open(port, baud)) {
-    RCLCPP_WARN(this->get_logger(), "Failed to open serial port %s",
-                port.c_str());
+  if (!transport->open(transport_config_)) {
+    RCLCPP_WARN(this->get_logger(), "Failed to open %s transport %s",
+                radar_comm::to_string(transport_config_.type),
+                radar_comm::describe_transport(transport_config_).c_str());
     return;
   }
 
-  serial->start();
-  serial_ = std::move(serial);
+  transport->start();
+  transport_ = std::move(transport);
   connected_ = true;
   runtime_stats_.watchdog_triggered.store(false, std::memory_order_relaxed);
-  RCLCPP_INFO(this->get_logger(), "Connected serial %s @ %d", port.c_str(),
-              baud);
+  RCLCPP_INFO(this->get_logger(), "Connected %s transport %s",
+              radar_comm::to_string(transport_config_.type),
+              radar_comm::describe_transport(transport_config_).c_str());
 }
 
-void RadarBridgeNode::handle_serial_disconnect() {
+void RadarBridgeNode::handle_transport_disconnect() {
   connected_ = false;
   runtime_stats_.serial_disconnects.fetch_add(1, std::memory_order_relaxed);
 }
@@ -277,7 +306,7 @@ void RadarBridgeNode::reconnect_loop() {
   bind_current_thread_if_needed(reconnect_cpu_affinity_);
   while (rclcpp::ok() && running_) {
     if (!connected_) {
-      connect_serial();
+      connect_transport();
     }
     std::this_thread::sleep_for(
         std::chrono::milliseconds(reconnect_interval_ms_));
@@ -308,8 +337,8 @@ void RadarBridgeNode::maybe_log_hex(const uint8_t *data, std::size_t size) {
                bytes_to_hex(data, size).c_str());
 }
 
-void RadarBridgeNode::handle_serial_chunk(const uint8_t *data,
-                                          std::size_t size) {
+void RadarBridgeNode::handle_transport_chunk(const uint8_t *data,
+                                             std::size_t size) {
   if (data == nullptr || size == 0) {
     return;
   }
@@ -391,7 +420,7 @@ void RadarBridgeNode::watchdog_check() {
     RCLCPP_WARN_THROTTLE(
         this->get_logger(), *this->get_clock(), 2000,
         "Watchdog timeout: no RX for %ld ms, forcing reconnect", age);
-    disconnect_serial();
+    disconnect_transport();
   } else if (connected_) {
     runtime_stats_.watchdog_triggered.store(false, std::memory_order_relaxed);
   }
@@ -405,9 +434,11 @@ void RadarBridgeNode::publish_status() {
   msg.raw_recording_enabled = record_raw_;
   msg.watchdog_triggered =
       runtime_stats_.watchdog_triggered.load(std::memory_order_relaxed);
-  msg.port = this->get_parameter("port").as_string();
+  msg.port = radar_comm::describe_transport(transport_config_);
   msg.baud_rate =
-      static_cast<uint32_t>(this->get_parameter("baud_rate").as_int());
+      transport_config_.type == radar_comm::TransportConfig::Type::Serial
+          ? static_cast<uint32_t>(transport_config_.baud_rate)
+          : 0U;
 
   const auto parser_stats = parser_.statistics();
   msg.rx_bytes = parser_stats.rx_bytes;
@@ -421,10 +452,10 @@ void RadarBridgeNode::publish_status() {
   msg.unknown_cmd_count = parser_stats.unknown_cmd_count;
 
   {
-    std::lock_guard<std::mutex> lock(serial_mutex_);
-    if (serial_) {
-      const auto serial_stats = serial_->statistics();
-      msg.rx_chunks = serial_stats.rx_chunks;
+    std::lock_guard<std::mutex> lock(transport_mutex_);
+    if (transport_) {
+      const auto transport_stats = transport_->statistics();
+      msg.rx_chunks = transport_stats.rx_chunks;
     }
   }
 
@@ -744,18 +775,17 @@ void RadarBridgeNode::send_protocol_data(const radar_comm::ProtocolData &data) {
     return;
   }
 
-  std::lock_guard<std::mutex> lock(serial_mutex_);
-  if (!serial_ || !connected_) {
+  std::lock_guard<std::mutex> lock(transport_mutex_);
+  if (!transport_ || !connected_) {
     runtime_stats_.tx_failures.fetch_add(1, std::memory_order_relaxed);
-    RCLCPP_WARN(this->get_logger(),
-                "Serial port is not connected, drop tx frame");
+    RCLCPP_WARN(this->get_logger(), "Transport is not connected, drop tx frame");
     return;
   }
 
-  if (!serial_->write(*frame)) {
+  if (!transport_->write(*frame)) {
     runtime_stats_.tx_failures.fetch_add(1, std::memory_order_relaxed);
     RCLCPP_ERROR(this->get_logger(),
-                 "Failed to write protocol frame to serial");
+                 "Failed to write protocol frame to transport");
     return;
   }
 

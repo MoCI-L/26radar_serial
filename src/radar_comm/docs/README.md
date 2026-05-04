@@ -19,9 +19,9 @@
 相较原始版本，当前工程新增或强化了以下能力：
 
 - 串口层
-  - 非阻塞 `open`
-  - `epoll` 等待事件，批量读，减少空转
-  - 双缓冲读取，避免读回调和下一次读争抢同一块缓存
+  - 基于 `Boost.Asio` 的跨平台异步 I/O
+  - 同时支持 `serial` 与 `tcp_client` 两种裁判链路接入
+  - 异步读写队列，降低收发互相阻塞
   - 自动重连
   - 可选 CPU 绑定
 - Parser / Decode
@@ -52,8 +52,8 @@
 
 数据流如下：
 
-1. 串口线程通过 `epoll` 等待可读事件
-2. 串口线程批量读取字节块到双缓冲
+1. `Boost.Asio` I/O 线程等待串口或 TCP 数据到达
+2. 传输层批量读取字节块并回调给协议解析器
 3. 同线程调用 `ProtocolParser::process()` 批处理解析
 4. 成功解出的协议对象进入 Lock-Free SPSC 队列
 5. ROS 发布线程从队列取出数据并发布到对应 topic
@@ -61,7 +61,7 @@
 
 这个结构的目标是：
 
-- 串口线程尽量只做 I/O 和解析，不碰 ROS 重逻辑
+- 传输线程尽量只做 I/O 和解析，不碰 ROS 重逻辑
 - 解析结果异步交给发布线程，降低卡顿传播
 - 出错时只隔离当前阶段，避免一处异常直接把整个链路打死
 
@@ -138,12 +138,16 @@ ros2 run radar_comm serial_node --ros-args --params-file src/radar_comm/config/s
 
 ## 7. 参数说明
 
-核心串口参数：
+核心传输参数：
 
+- `transport_type`：`serial` 或 `tcp_client`
 - `port`：串口设备名，默认 `/dev/ttyACM0`
 - `baud_rate`：支持 `115200 / 230400 / 460800 / 921600`
+- `tcp_host`：当 `transport_type=tcp_client` 时使用
+- `tcp_port`：当 `transport_type=tcp_client` 时使用
 - `reconnect_interval_ms`：断线重连周期
-- `epoll_timeout_ms`：`epoll_wait` 超时
+- `transport_poll_timeout_ms`：传输轮询参数，占位兼容旧配置
+- `epoll_timeout_ms`：旧版兼容参数，仍可保留
 - `read_buffer_size`：单次批量读缓存大小
 
 解析与 watchdog：
@@ -166,7 +170,7 @@ QoS：
 线程与告警：
 
 - `publish_queue_warn_threshold`：发布队列深度告警阈值
-- `rx_cpu_affinity`：串口线程绑定 CPU，`-1` 表示关闭
+- `rx_cpu_affinity`：传输线程绑定 CPU，`-1` 表示关闭
 - `publish_cpu_affinity`：发布线程绑定 CPU
 - `reconnect_cpu_affinity`：重连线程绑定 CPU
 
@@ -198,7 +202,8 @@ QoS：
 
 这个话题用于在线判断链路健康度。关键字段：
 
-- `connected`：当前串口是否已连接
+- `connected`：当前传输链路是否已连接
+- `port`：当前传输端点描述，串口形如 `/dev/ttyACM0 @ 115200`，TCP 形如 `127.0.0.1:10001`
 - `rx_bytes / rx_chunks / rx_frames`：接收吞吐
 - `tx_frames / tx_failures`：发送情况
 - `crc8_failures / crc16_failures`：校验失败次数
@@ -228,6 +233,15 @@ QoS：
 
 ```bash
 ros2 topic echo /radar/status/comm
+```
+
+TCP 模式示例：
+
+```bash
+ros2 run radar_comm serial_node --ros-args \
+  -p transport_type:=tcp_client \
+  -p tcp_host:=127.0.0.1 \
+  -p tcp_port:=10001
 ```
 
 查看位置：
@@ -260,9 +274,9 @@ ros2 run radar_comm serial_node --ros-args \
 
 说明：
 
-- 录制内容是原始串口字节流
+- 录制内容是原始传输字节流
 - 默认追加写入
-- 适合复盘 CRC 错误、串口抖动、未知命令
+- 适合复盘 CRC 错误、链路抖动、未知命令
 
 ## 12. Debug / HEX 日志
 
@@ -287,7 +301,7 @@ ros2 run radar_comm serial_node --ros-args -p debug_enabled:=true
 - payload 长度防御
 - unknown cmd 监控
 - 超时丢帧
-- 串口线程 / 发布线程解耦
+- 传输线程 / 发布线程解耦
 - 异常捕获并计数
 - 双缓冲读
 - Lock-Free 单生产者单消费者队列
@@ -296,7 +310,7 @@ ros2 run radar_comm serial_node --ros-args -p debug_enabled:=true
 
 关于“零拷贝设计”，当前版本做到的是：
 
-- 串口回调按批量 buffer 解析，不再逐字节拷贝 payload
+- 传输回调按批量 buffer 解析，不再逐字节拷贝 payload
 - parser 在完整帧 buffer 上直接解码
 - 解析成功后只把轻量协议对象推入队列
 

@@ -1,24 +1,18 @@
 #pragma once
 
-#include <atomic>
-#include <cstddef>
-#include <functional>
+#include <memory>
 #include <string>
-#include <thread>
 #include <vector>
+
+#include "radar_comm/transport/transport.hpp"
 
 namespace radar_comm {
 
 class SerialPort {
 public:
-  struct Statistics {
-    uint64_t rx_bytes{0};
-    uint64_t rx_chunks{0};
-    uint64_t disconnects{0};
-  };
-
-  using Callback = std::function<void(const uint8_t *, std::size_t)>;
-  using DisconnectCallback = std::function<void()>;
+  using Statistics = Transport::Statistics;
+  using Callback = Transport::Callback;
+  using DisconnectCallback = Transport::DisconnectCallback;
 
   SerialPort();
   ~SerialPort();
@@ -38,26 +32,7 @@ public:
   Statistics statistics() const;
 
 private:
-  void loop();
-  int setBaud(int baudrate);
-  bool configureLowLatency();
-  void closeUnlocked();
-
-private:
-  int fd_{-1};
-  int epoll_fd_{-1};
-  std::thread th_;
-  std::atomic<bool> running_{false};
-  Callback callback_;
-  DisconnectCallback disconnect_callback_;
-  std::string port_name_;
-  int baudrate_{115200};
-  bool debug_{false};
-  int cpu_affinity_{-1};
-  std::size_t buffer_size_{4096};
-  int poll_timeout_ms_{100};
-  std::vector<uint8_t> buffers_[2];
-  Statistics stats_{};
+  std::unique_ptr<Transport> transport_;
 };
 
 } // namespace radar_comm

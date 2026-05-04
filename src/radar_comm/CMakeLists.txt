@@ -9,6 +9,7 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(Boost REQUIRED COMPONENTS system)
 find_package(builtin_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rcl_interfaces REQUIRED)
@@ -22,6 +23,7 @@ set(PROTOCOL_SRC
 )
 
 set(TRANSPORT_SRC
+  src/transport/asio_transport.cpp
   src/transport/serial_port.cpp
 )
 
@@ -40,6 +42,9 @@ target_include_directories(test_serial PUBLIC include)
 target_include_directories(serial_node PUBLIC include)
 target_include_directories(fake_sender PUBLIC include)
 target_include_directories(serial_fake_node PUBLIC include)
+
+target_link_libraries(test_serial Boost::system)
+target_link_libraries(serial_node Boost::system)
 
 ament_target_dependencies(serial_node builtin_interfaces rclcpp rcl_interfaces radar_interfaces)
 ament_target_dependencies(fake_sender rclcpp rcl_interfaces radar_interfaces)

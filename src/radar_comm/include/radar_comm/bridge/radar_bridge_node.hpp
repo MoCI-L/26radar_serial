@@ -25,7 +25,7 @@
 #include "radar_interfaces/msg/radar_decision_command.hpp"
 #include "radar_interfaces/msg/radar_comm_status.hpp"
 
-#include "radar_comm/transport/serial_port.hpp"
+#include "radar_comm/transport/transport.hpp"
 #include "radar_comm/protocol/encoder.hpp"
 #include "radar_comm/protocol/parser.hpp"
 #include "radar_comm/protocol/types.hpp"
@@ -62,12 +62,12 @@ private:
     rclcpp::QoS make_status_qos() const;
     builtin_interfaces::msg::Time now_msg();
 
-    // 串口连接管理
-    void connect_serial();
-    void disconnect_serial();
+    // 传输层连接管理
+    void connect_transport();
+    void disconnect_transport();
     void reconnect_loop();
-    void handle_serial_chunk(const uint8_t *data, std::size_t size);
-    void handle_serial_disconnect();
+    void handle_transport_chunk(const uint8_t *data, std::size_t size);
+    void handle_transport_disconnect();
     void publish_loop();
     void publish_status();
     void watchdog_check();
@@ -109,12 +109,12 @@ private:
     rclcpp::Subscription<radar_interfaces::msg::RadarDecisionCommand>::SharedPtr decision_cmd_tx_sub_;
 
     // 底层组件
-    std::unique_ptr<radar_comm::SerialPort> serial_;
+    std::unique_ptr<radar_comm::Transport> transport_;
     radar_comm::ProtocolParser parser_;
     radar_comm::SpscQueue<ProtocolEnvelope, 2048> publish_queue_;
 
     // 状态
-    std::mutex serial_mutex_;
+    std::mutex transport_mutex_;
     std::mutex publish_cv_mutex_;
     std::mutex record_mutex_;
     std::atomic<bool> connected_{false};
@@ -132,8 +132,9 @@ private:
     int publish_queue_warn_threshold_{1536};
     int frame_timeout_ms_{100};
     int watchdog_timeout_ms_{2000};
-    int epoll_timeout_ms_{100};
+    int transport_poll_timeout_ms_{100};
     int read_buffer_size_{4096};
+    radar_comm::TransportConfig transport_config_{};
     std::string record_path_;
     std::ofstream raw_record_stream_;
     std::condition_variable publish_cv_;
