@@ -1,9 +1,9 @@
 /**:
   ros__parameters:
     transport_type: "serial"
-    port: "/dev/ttyACM0"
+    port: "/dev/ttyUSB0"
     baud_rate: 115200
-    tcp_host: "127.0.0.1"
+    tcp_host: "192.168.1.2"
     tcp_port: 10001
     reconnect_interval_ms: 1000
     frame_timeout_ms: 100

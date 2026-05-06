@@ -12,6 +12,7 @@ std::optional<CmdID> cmd_id_for_data(const ProtocolData& data);
 
 std::vector<uint8_t> encode_payload(const RadarMarkProgress& data);
 std::vector<uint8_t> encode_payload(const RadarInfo& data);
+std::vector<uint8_t> encode_payload(const RadarInfoForward& data);
 std::vector<uint8_t> encode_payload(const MapRobotData& data);
 std::vector<uint8_t> encode_payload(const RadarDecisionCommand& data);
 std::vector<uint8_t> encode_payload(const EnemyRobotPosition& data);

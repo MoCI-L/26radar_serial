@@ -10,6 +10,7 @@
 
 - `0x020C` 雷达标记进度
 - `0x020E` 雷达自主决策状态
+- `0x0301 / 0x0122` 自定义雷达状态下发（机器人 ID + 干扰波等级）
 - `0x0301 / 0x0121` 雷达自主决策指令
 - `0x0305` 小地图机器人坐标
 - `0x0A01 ~ 0x0A06` 雷达无线链路全部 6 个命令
@@ -186,12 +187,14 @@ QoS：
 - `/radar/rx/enemy/interference_key` -> `radar_interfaces/msg/InterferenceKey`
 - `/radar/rx/radar/mark_progress` -> `radar_interfaces/msg/RadarMarkProgress`
 - `/radar/rx/radar/info` -> `radar_interfaces/msg/RadarInfo`
+- `/radar/rx/radar_info_forward` -> `radar_interfaces/msg/RadarInfoForward`
 - `/radar/rx/map_robot_data` -> `radar_interfaces/msg/MapRobotData`
 - `/radar/rx/decision_command` -> `radar_interfaces/msg/RadarDecisionCommand`
 
 ### 8.2 发送入口
 
 - `/radar/tx/map_robot_data`
+- `/radar/tx/radar_info_forward`
 - `/radar/tx/decision_command`
 
 ### 8.3 状态话题
@@ -260,6 +263,12 @@ ros2 topic echo /radar/rx/radar/info
 
 ```bash
 ros2 topic pub --once /radar/tx/decision_command radar_interfaces/msg/RadarDecisionCommand "{sender_id: 109, receiver_id: 32896, double_vulnerability_request: 1, password_command_type: 2, password: A1B2C3}"
+```
+
+发送机器人 ID + 干扰波等级：
+
+```bash
+ros2 topic pub --once /radar/tx/radar_info_forward radar_interfaces/msg/RadarInfoForward "{robot_id: 109, encryption_level: 3}"
 ```
 
 ## 11. 原始数据录制

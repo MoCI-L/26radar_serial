@@ -68,6 +68,19 @@ int main() {
     return 1;
   }
 
+  const radar_comm::RadarInfoForward radar_info_forward{
+      109, 3};
+  if (!round_trip<radar_comm::RadarInfoForward>(
+          radar_info_forward, radar_info_forward,
+          [&](const radar_comm::RadarInfoForward& decoded) {
+            return decoded.robot_id == radar_info_forward.robot_id &&
+                   decoded.encryption_level ==
+                       radar_info_forward.encryption_level;
+          })) {
+    std::cerr << "RadarInfoForward round trip failed\n";
+    return 1;
+  }
+
   const radar_comm::MapRobotData map_data{
       10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120,
       130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240};

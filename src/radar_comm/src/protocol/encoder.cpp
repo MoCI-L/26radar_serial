@@ -33,6 +33,8 @@ std::optional<CmdID> cmd_id_for_data(const ProtocolData& data) {
           return CmdID::RadarMarkProgress;
         } else if constexpr (std::is_same_v<T, RadarInfo>) {
           return CmdID::RadarInfo;
+        } else if constexpr (std::is_same_v<T, RadarInfoForward>) {
+          return CmdID::RobotInteraction;
         } else if constexpr (std::is_same_v<T, MapRobotData>) {
           return CmdID::MapRobotData;
         } else if constexpr (std::is_same_v<T, RadarDecisionCommand>) {
@@ -88,6 +90,16 @@ std::vector<uint8_t> encode_payload(const RadarInfo& data) {
   bits |= (data.encryption_level & 0x3u) << 3;
   bits |= static_cast<uint8_t>(data.key_change_enabled) << 5;
   push_u8(out, bits);
+  return out;
+}
+
+std::vector<uint8_t> encode_payload(const RadarInfoForward& data) {
+  std::vector<uint8_t> out;
+  out.reserve(5);
+
+  push_u16(out, kRadarInfoForwardDataCmdId);
+  push_u16(out, data.robot_id);
+  push_u8(out, data.encryption_level & 0x3u);
   return out;
 }
 

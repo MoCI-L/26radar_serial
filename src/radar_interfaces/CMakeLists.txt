@@ -20,6 +20,7 @@ set(msg_files
   "msg/InterferenceKey.msg"
   "msg/RadarMarkProgress.msg"
   "msg/RadarInfo.msg"
+  "msg/RadarInfoForward.msg"
   "msg/MapRobotData.msg"
   "msg/RadarDecisionCommand.msg"
   "msg/RadarCommStatus.msg"

@@ -22,22 +22,37 @@ DecodeResult decode(uint16_t cmd_id, const uint8_t *payload, std::size_t payload
 
 DecodeResult decode(CmdID cmd_id, const uint8_t *p, std::size_t payload_size) {
     if (cmd_id == CmdID::RobotInteraction) {
-        if (payload_size != 14) {
-            return {DecodeStatus::InvalidPayloadLength, to_uint16(cmd_id), 14, payload_size, std::monostate{}};
+        if (payload_size < 2) {
+            return {DecodeStatus::InvalidPayloadLength, to_uint16(cmd_id), 2, payload_size, std::monostate{}};
         }
 
         const uint16_t data_cmd_id = read<uint16_t>(p, 0);
-        if (data_cmd_id != kRadarDecisionDataCmdId) {
-            return {DecodeStatus::InvalidSubcommand, to_uint16(cmd_id), 14, payload_size, std::monostate{}};
+        if (data_cmd_id == kRadarDecisionDataCmdId) {
+            if (payload_size != 14) {
+                return {DecodeStatus::InvalidPayloadLength, to_uint16(cmd_id), 14, payload_size, std::monostate{}};
+            }
+
+            RadarDecisionCommand d{};
+            d.sender_id = read<uint16_t>(p, 2);
+            d.receiver_id = read<uint16_t>(p, 4);
+            d.double_vulnerability_request = p[6];
+            d.password_command_type = p[7];
+            std::memcpy(d.password.data(), p + 8, d.password.size());
+            return {DecodeStatus::Ok, to_uint16(cmd_id), 14, payload_size, d};
         }
 
-        RadarDecisionCommand d{};
-        d.sender_id = read<uint16_t>(p, 2);
-        d.receiver_id = read<uint16_t>(p, 4);
-        d.double_vulnerability_request = p[6];
-        d.password_command_type = p[7];
-        std::memcpy(d.password.data(), p + 8, d.password.size());
-        return {DecodeStatus::Ok, to_uint16(cmd_id), 14, payload_size, d};
+        if (data_cmd_id == kRadarInfoForwardDataCmdId) {
+            if (payload_size != 5) {
+                return {DecodeStatus::InvalidPayloadLength, to_uint16(cmd_id), 5, payload_size, std::monostate{}};
+            }
+
+            RadarInfoForward d{};
+            d.robot_id = read<uint16_t>(p, 2);
+            d.encryption_level = p[4] & 0x3u;
+            return {DecodeStatus::Ok, to_uint16(cmd_id), 5, payload_size, d};
+        }
+
+        return {DecodeStatus::InvalidSubcommand, to_uint16(cmd_id), 0, payload_size, std::monostate{}};
     }
 
     if (payload_size != expected_payload_length(cmd_id)) {

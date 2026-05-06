@@ -21,6 +21,7 @@
 #include "radar_interfaces/msg/interference_key.hpp"
 #include "radar_interfaces/msg/radar_mark_progress.hpp"
 #include "radar_interfaces/msg/radar_info.hpp"
+#include "radar_interfaces/msg/radar_info_forward.hpp"
 #include "radar_interfaces/msg/map_robot_data.hpp"
 #include "radar_interfaces/msg/radar_decision_command.hpp"
 #include "radar_interfaces/msg/radar_comm_status.hpp"
@@ -85,8 +86,10 @@ private:
     void publish_key(const radar_comm::EnemyInterferenceKey& key, const builtin_interfaces::msg::Time &stamp);
     void publish_mark_progress(const radar_comm::RadarMarkProgress& progress, const builtin_interfaces::msg::Time &stamp);
     void publish_radar_info(const radar_comm::RadarInfo& info, const builtin_interfaces::msg::Time &stamp);
+    void publish_radar_info_forward(const radar_comm::RadarInfoForward& info, const builtin_interfaces::msg::Time &stamp);
     void publish_map_robot_data(const radar_comm::MapRobotData& data, const builtin_interfaces::msg::Time &stamp);
     void publish_decision_command(const radar_comm::RadarDecisionCommand& cmd, const builtin_interfaces::msg::Time &stamp);
+    void on_radar_info_forward_tx(const radar_interfaces::msg::RadarInfoForward& msg);
     void on_map_robot_data_tx(const radar_interfaces::msg::MapRobotData& msg);
     void on_decision_command_tx(const radar_interfaces::msg::RadarDecisionCommand& msg);
     void send_protocol_data(const radar_comm::ProtocolData& data);
@@ -100,11 +103,13 @@ private:
     rclcpp::Publisher<radar_interfaces::msg::InterferenceKey>::SharedPtr key_pub_;
     rclcpp::Publisher<radar_interfaces::msg::RadarMarkProgress>::SharedPtr mark_pub_;
     rclcpp::Publisher<radar_interfaces::msg::RadarInfo>::SharedPtr radar_info_pub_;
+    rclcpp::Publisher<radar_interfaces::msg::RadarInfoForward>::SharedPtr radar_info_forward_pub_;
     rclcpp::Publisher<radar_interfaces::msg::MapRobotData>::SharedPtr map_robot_data_pub_;
     rclcpp::Publisher<radar_interfaces::msg::RadarDecisionCommand>::SharedPtr decision_cmd_pub_;
     rclcpp::Publisher<radar_interfaces::msg::RadarCommStatus>::SharedPtr status_pub_;
 
     // 发送订阅者
+    rclcpp::Subscription<radar_interfaces::msg::RadarInfoForward>::SharedPtr radar_info_forward_tx_sub_;
     rclcpp::Subscription<radar_interfaces::msg::MapRobotData>::SharedPtr map_robot_data_tx_sub_;
     rclcpp::Subscription<radar_interfaces::msg::RadarDecisionCommand>::SharedPtr decision_cmd_tx_sub_;
 

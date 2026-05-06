@@ -58,6 +58,9 @@ RadarBridgeNode::RadarBridgeNode() : Node("radar_bridge_node") {
       "/radar/rx/radar/mark_progress", data_qos);
   radar_info_pub_ = this->create_publisher<radar_interfaces::msg::RadarInfo>(
       "/radar/rx/radar/info", data_qos);
+  radar_info_forward_pub_ =
+      this->create_publisher<radar_interfaces::msg::RadarInfoForward>(
+          "/radar/rx/radar_info_forward", data_qos);
   map_robot_data_pub_ =
       this->create_publisher<radar_interfaces::msg::MapRobotData>(
           "/radar/rx/map_robot_data", data_qos);
@@ -67,6 +70,12 @@ RadarBridgeNode::RadarBridgeNode() : Node("radar_bridge_node") {
   status_pub_ = this->create_publisher<radar_interfaces::msg::RadarCommStatus>(
       "/radar/status/comm", status_qos);
 
+  radar_info_forward_tx_sub_ =
+      this->create_subscription<radar_interfaces::msg::RadarInfoForward>(
+          "/radar/tx/radar_info_forward", make_status_qos(),
+          [this](const radar_interfaces::msg::RadarInfoForward &msg) {
+            on_radar_info_forward_tx(msg);
+          });
   map_robot_data_tx_sub_ =
       this->create_subscription<radar_interfaces::msg::MapRobotData>(
           "/radar/tx/map_robot_data", make_status_qos(),
@@ -500,6 +509,8 @@ void RadarBridgeNode::on_protocol_data(const ProtocolEnvelope &envelope) {
           publish_mark_progress(arg, envelope.stamp);
         } else if constexpr (std::is_same_v<T, radar_comm::RadarInfo>) {
           publish_radar_info(arg, envelope.stamp);
+        } else if constexpr (std::is_same_v<T, radar_comm::RadarInfoForward>) {
+          publish_radar_info_forward(arg, envelope.stamp);
         } else if constexpr (std::is_same_v<T, radar_comm::MapRobotData>) {
           publish_map_robot_data(arg, envelope.stamp);
         } else if constexpr (std::is_same_v<T,
@@ -664,6 +675,16 @@ void RadarBridgeNode::publish_radar_info(
   radar_info_pub_->publish(msg);
 }
 
+void RadarBridgeNode::publish_radar_info_forward(
+    const radar_comm::RadarInfoForward &info,
+    const builtin_interfaces::msg::Time &stamp) {
+  radar_interfaces::msg::RadarInfoForward msg;
+  msg.stamp = stamp;
+  msg.robot_id = info.robot_id;
+  msg.encryption_level = info.encryption_level;
+  radar_info_forward_pub_->publish(msg);
+}
+
 void RadarBridgeNode::publish_map_robot_data(
     const radar_comm::MapRobotData &data,
     const builtin_interfaces::msg::Time &stamp) {
@@ -707,6 +728,14 @@ void RadarBridgeNode::publish_decision_command(
   msg.password_command_type = cmd.password_command_type;
   msg.password = std::string(cmd.password.data(), cmd.password.size());
   decision_cmd_pub_->publish(msg);
+}
+
+void RadarBridgeNode::on_radar_info_forward_tx(
+    const radar_interfaces::msg::RadarInfoForward &msg) {
+  radar_comm::RadarInfoForward data{};
+  data.robot_id = msg.robot_id;
+  data.encryption_level = msg.encryption_level;
+  send_protocol_data(data);
 }
 
 void RadarBridgeNode::on_map_robot_data_tx(
