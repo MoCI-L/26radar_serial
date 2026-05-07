@@ -418,20 +418,45 @@ void RadarBridgeNode::publish_loop() {
 }
 
 void RadarBridgeNode::watchdog_check() {
+
+  if (!connected_) {
+    return;
+  }
+
+  const auto last_rx_ns =
+      last_rx_steady_ns_.load(std::memory_order_relaxed);
+
+  // 尚未收到任何数据
+  if (last_rx_ns == 0) {
+    return;
+  }
+
   const auto now = std::chrono::steady_clock::now();
-  const auto last_rx_ns = last_rx_steady_ns_.load(std::memory_order_relaxed);
+
   const auto age =
       std::chrono::duration_cast<std::chrono::milliseconds>(
-          now.time_since_epoch() - std::chrono::nanoseconds(last_rx_ns))
+          now.time_since_epoch() -
+          std::chrono::nanoseconds(last_rx_ns))
           .count();
-  if (connected_ && age > watchdog_timeout_ms_) {
-    runtime_stats_.watchdog_triggered.store(true, std::memory_order_relaxed);
+
+  if (age > watchdog_timeout_ms_) {
+
+    runtime_stats_.watchdog_triggered.store(
+        true,
+        std::memory_order_relaxed);
+
     RCLCPP_WARN_THROTTLE(
-        this->get_logger(), *this->get_clock(), 2000,
-        "Watchdog timeout: no RX for %ld ms, forcing reconnect", age);
-    disconnect_transport();
-  } else if (connected_) {
-    runtime_stats_.watchdog_triggered.store(false, std::memory_order_relaxed);
+        this->get_logger(),
+        *this->get_clock(),
+        2000,
+        "Watchdog timeout: no RX for %ld ms",
+        age);
+
+  } else {
+
+    runtime_stats_.watchdog_triggered.store(
+        false,
+        std::memory_order_relaxed);
   }
 }
 
